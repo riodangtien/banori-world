@@ -35,14 +35,7 @@ function updateForest(name){
   screens.forEach(screen=>screen.inert=screen.dataset.screen!==name);
 }
 forest.addEventListener('load',()=>{
-  // Preserve the scene. Only route ordinary wheel input to the landing page.
   const frameWindow=forest.contentWindow;
-  frameWindow.addEventListener('wheel',event=>{
-    if(event.ctrlKey||event.metaKey)return;
-    event.preventDefault();event.stopImmediatePropagation();
-    const distance=event.deltaY*(event.deltaMode===1?16:event.deltaMode===2?worldScroll.clientHeight:1);
-    worldScroll.scrollBy({top:distance,behavior:'instant'});
-  },{capture:true,passive:false});
   frameWindow.addEventListener('keydown',event=>{
     const movement={ArrowDown:60,ArrowUp:-60,PageDown:worldScroll.clientHeight*.85,PageUp:-worldScroll.clientHeight*.85,' ':worldScroll.clientHeight*.85}[event.key];
     if(movement){event.preventDefault();worldScroll.scrollBy({top:movement,behavior:'smooth'});}
