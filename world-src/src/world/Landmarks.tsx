@@ -1,3 +1,4 @@
+import { bridgeStrip,bridgeSurfaceY } from './bridgeSurface';
 import { useEffect,useMemo,useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
@@ -63,10 +64,12 @@ export function buildLandmarks(){const b=new Builder();
  for(let i=0;i<8;i++){const a=i/8*6.283,dx=Math.cos(a)*(i%2?1.8:1.4),dz=Math.sin(a)*(i%2?1.8:1.4),cy=hy+3.1+(i%3)*.65;b.cylinder([hx,hy+2.1,hz],[hx+dx,cy,hz+dz],.22,'#725333',.1);b.rock([hx+dx,cy+.55,hz+dz],[1.2,1.1,1.12],i%3===0?'#d8b257':i%3===1?'#c79f45':'#b7a452',a);}b.rock([hx,hy+4.6,hz],[1.35,1.13,1.3],'#e0ba62');
  // Humid root micro-scenes: a few fern fronds and mushrooms, not a carpet.
  for(let i=0;i<18;i++){const a=i*2.4,d=1.6+(i%4)*.36,cx=hx+Math.cos(a)*d,cz=hz+Math.sin(a)*d,y=heightAt(cx,cz);if(i%3===0){b.cylinder([cx,y,cz],[cx,y+.13,cz],.025,'#dbd4b0');b.rock([cx,y+.16,cz],[.105,.06,.105],'#b97346');}else for(let j=0;j<3;j++)b.rock([cx+(j-1)*.07,y+.1,cz],[.1,.19,.03],'#6c924d',a+j);}
- // Bridge decks span the complete detected wet interval; bank ramps touch the sampled terrain.
- for(const br of bridges){const dir=new Vector3(Math.sin(br.angle),0,Math.cos(br.angle)),normal=new Vector3(dir.z,0,-dir.x),at=(t:number,side=0,y=br.y):V=>[br.x+dir.x*t+normal.x*side,y,br.z+dir.z*t+normal.z*side];const count=Math.ceil(br.length/.19);for(let i=0;i<=count;i++)b.box(at(-br.length/2+i*br.length/count),[1.22,.13,.18],lightwood,br.angle);
-  for(const side of [-.52,.52]){b.beam(at(-br.length/2,side,br.y-.12),at(br.length/2,side,br.y-.12),.15,wood);b.beam(at(-br.length/2,side,br.y+.65),at(br.length/2,side,br.y+.65),.085,wood);for(const t of [-br.length/2,br.length/2]){const p=at(t,side);b.box([p[0],(heightAt(p[0],p[2])+br.y+.72)/2,p[2]],[.1,br.y+.72-heightAt(p[0],p[2]),.1],wood);}}
-  for(const end of [-1,1]){const bank=end===-1?br.a:br.b,outer=at(end*(br.length/2+.65));b.beam([bank[0],br.y,bank[1]],[outer[0],heightAt(outer[0],outer[2])+.025,outer[2]],.24,lightwood);for(let i=0;i<5;i++){const t=i/4,pos=at(end*(br.length/2+.65*t),0,br.y*(1-t)+(heightAt(outer[0],outer[2])+.04)*t);b.box(pos,[1.2,.08,.18],lightwood,br.angle);}}
+ // Solid bridge surfaces and continuous bank ramps share the player's height profile.
+ for(const br of bridges){const dir=new Vector3(Math.sin(br.angle),0,Math.cos(br.angle)),normal=new Vector3(dir.z,0,-dir.x),at=(t:number,side=0,y=br.y):V=>[br.x+dir.x*t+normal.x*side,y,br.z+dir.z*t+normal.z*side];
+  const half=br.length/2,total=br.length+br.ramp*2,count=Math.ceil(total/.16);for(let i=0;i<count;i++){const a=-half-br.ramp+i*total/count,c=-half-br.ramp+(i+1)*total/count;b.add(bridgeStrip(br,a,c),i%3===0?'#c5a160':lightwood,[0,0,0]);}
+  for(const side of [-.57,.57]){b.beam(at(-half,side,br.y-.12),at(half,side,br.y-.12),.12,wood);const postCount=Math.max(1,Math.ceil(br.length/1.3));for(let i=0;i<=postCount;i++){const t=-half+i*br.length/postCount,p=at(t,side),floor=heightAt(p[0],p[2]);b.box([p[0],(floor+br.y+.8)/2,p[2]],[.09,br.y+.8-floor,.09],wood);}b.beam(at(-half,side,br.y+.72),at(half,side,br.y+.72),.075,wood);
+   for(const end of [-1,1]){let prev=at(end*half,side,br.y+.72);for(let i=1;i<=8;i++){const t=end*(half+br.ramp*i/8),p=at(t,side,bridgeSurfaceY(br,t,side)+.655);b.beam(prev,p,.075,wood);prev=p;}const t=end*(half+br.ramp),p=at(t,side,bridgeSurfaceY(br,t,side));b.box([p[0],p[1]+.33,p[2]],[.09,.66,.09],wood);}
+  }
  }
  // Cliff framing sits beside the source and basin, leaving the lip visibly open.
  for(const side of [-1,1])for(let i=0;i<4;i++){const cx=-8.5+side*(1.32+i*.35),cz=-14.3-(i%2)*.6,y=heightAt(cx,cz);b.rock([cx,y-.12,cz],[.6,.7,.65],i%2?'#69766a':'#83917b',i*.7);}
