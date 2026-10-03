@@ -1,0 +1,34 @@
+{
+  "findings": [],
+  "counts": {
+    "trees": 287,
+    "rocks": 190,
+    "logs": 20,
+    "stumps": 32,
+    "bridges": 4
+  },
+  "terrainGrid": 0.4,
+  "seed": 47023,
+  "terrainVariation": -0.04845953949687298,
+  "invalidTransforms": [],
+  "animals": [
+    {
+      "name": "wildlife-deer",
+      "x": -17.404096418253182,
+      "z": -12.142866769539427,
+      "groundGap": 0
+    },
+    {
+      "name": "wildlife-fox",
+      "x": 20.805138890856785,
+      "z": 4.553100277904079,
+      "groundGap": -0.002
+    }
+  ],
+  "weather": [],
+  "fps": 60,
+  "drawCalls": 142,
+  "triangles": 161203,
+  "geometries": 93,
+  "textures": 15
+}

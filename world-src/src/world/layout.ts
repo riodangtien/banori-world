@@ -1,0 +1,30 @@
+import { random } from '../utils/random';
+import { heightAt,insideIsland,isWater,inClearing,biomeAt,terrainNoise,distanceToTrail,trailPoint,trailways,GRID,waterwayPoint,waterWidthAt,isLake } from './map';
+import { validatePlacement,type Footprint } from './grounding';
+export type Plant=Footprint&{s:number;rotation:number;variant:number};
+export const sites:Footprint[]=[{id:'tower-sign',kind:'prop',x:19,z:-8.1,r:.7},{id:'banana-accent',kind:'plant',x:-16.8,z:10.3,r:1.2},{id:'hero',kind:'landmark',x:17,z:2,r:3.9},{id:'camp',kind:'landmark',x:-14,z:8,r:4.1},{id:'tower',kind:'landmark',x:17,z:-11,r:2.2},{id:'tower-stairs',kind:'landmark',x:17,z:-8.5,r:1.45},{id:'falls',kind:'landmark',x:-8.5,z:-14.5,r:2.4},{id:'sanctuary',kind:'landmark',x:-19,z:15.5,r:1.5}];
+export const animalZones=[{species:'deer',x:-16,z:-12,r:2.45},{species:'fox',x:21,z:4.5,r:1.6},{species:'rabbit',x:-15,z:2.8,r:1.4},{species:'frog',x:15,z:11,r:.65},
+ {species:'deer',x:-10,z:8,r:1.7},{species:'deer',x:-20,z:-8,r:1.7},
+ {species:'fox',x:4.8,z:-4.8,r:1.25},{species:'fox',x:-2.4,z:5.4,r:1.25},
+ {species:'rabbit',x:.6,z:-16.2,r:1.1},{species:'rabbit',x:-22.8,z:8.4,r:1.1},{species:'rabbit',x:-10.2,z:-4.2,r:1.1},
+ {species:'frog',x:7.2,z:15.6,r:.65},{species:'frog',x:-15.6,z:-1.8,r:.65},{species:'frog',x:12.6,z:8.4,r:.65}] as const;
+export type Bridge={id:string;a:[number,number];b:[number,number];x:number;z:number;angle:number;length:number;y:number;ay:number;by:number};
+export function buildBridges(){const result:Bridge[]=[];trailways.forEach((_,path)=>{let start:number|null=null;const n=240;for(let i=0;i<=n;i++){const p=trailPoint(path,i/n),wet=isWater(p.x,p.y);if(wet&&start===null)start=Math.max(0,i-1);if(!wet&&start!==null){const end=Math.min(n,i+1),a=trailPoint(path,start/n),b=trailPoint(path,end/n);if(a.distanceTo(b)>.2){const ay=heightAt(a.x,a.y),by=heightAt(b.x,b.y);result.push({id:'bridge-'+path+'-'+i,a:[a.x,a.y],b:[b.x,b.y],x:(a.x+b.x)/2,z:(a.y+b.y)/2,angle:Math.atan2(b.x-a.x,b.y-a.y),length:a.distanceTo(b),y:Math.max(ay,by,.3)+.14,ay,by});}start=null;}}});return result;}
+export const bridges=buildBridges();
+const reserve:Footprint[]=[...sites,...animalZones.map((a,i)=>({...a,id:'glade-'+i,kind:'habitat'})),...bridges.map(b=>({id:b.id,x:b.x,z:b.z,r:b.length/2+.45,kind:'bridge'}))];
+const r=random(47023),objects=[...reserve],trees:Plant[]=[],rocks:Plant[]=[],logs:Plant[]=[],stumps:Plant[]=[];
+const clusters=Array.from({length:140},()=>({x:r()*54-27,z:r()*40-20,spread:1.6+r()*2.5}));
+for(let k=0;k<7500&&trees.length<430;k++){const c=clusters[k%clusters.length],a=r()*6.283,d=Math.sqrt(r())*c.spread,x=c.x+Math.cos(a)*d,z=c.z+Math.sin(a)*d,b=biomeAt(x,z),s=(b==='pine'?.75:b==='oldForest'?.82:.6)+r()*.65;
+ const p:Plant={id:'tree-'+trees.length,kind:'tree',x,z,s,r:(b==='pine'?.57:.75)*s,rotation:r()*6.283,variant:Math.floor(r()*4),y:heightAt(x,z)};
+ if(inClearing(x,z)||b==='waterfall'||b==='wetland'||(b==='meadow'&&Math.hypot(x+14,z-7)<6)||(!['pine','oldForest','hidden','rocky'].includes(b)&&r()<.2))continue;
+ if(!validatePlacement(p,objects)){trees.push(p);objects.push(p);}}
+// Three generous trees instead of fifteen overlapping crowns on the little lake island.
+for(const [x,z,s] of [[7.1,5.3,.65]]){const p:Plant={id:'island-tree',kind:'tree',x,z,s,r:.5,rotation:.7,variant:2,y:heightAt(x,z)};if(!validatePlacement(p,objects)){trees.push(p);objects.push(p);}}
+for(let i=0;i<2400&&rocks.length<190;i++){const x=r()*54-27,z=r()*40-20,b=biomeAt(x,z),s=(b==='rocky'?.55:.17)+r()*(b==='rocky'?.65:.32),p:Plant={id:'rock-'+rocks.length,kind:'rock',x,z,s,r:s*.95,rotation:r()*6.283,variant:Math.floor(r()*5),y:heightAt(x,z)};if(!validatePlacement(p,objects)&&!inClearing(x,z)){rocks.push(p);objects.push(p);}}
+for(let i=0;i<4000&&logs.length<20;i++){const x=r()*48-24,z=r()*36-18,s=.45+r()*.45,p:Plant={id:'log-'+logs.length,kind:'log',x,z,s,r:s*.95,rotation:r()*6.283,variant:0,y:heightAt(x,z)};if(!validatePlacement(p,objects)&&!inClearing(x,z)&&['pine','hidden','oldForest','central'].includes(biomeAt(x,z))){logs.push(p);objects.push(p);}}
+for(let i=0;i<300&&stumps.length<32;i++){const x=r()*48-24,z=r()*36-18,s=.12+r()*.17,p:Plant={id:'stump-'+stumps.length,kind:'stump',x,z,s,r:s,rotation:r()*6.283,variant:0,y:heightAt(x,z)};if(!validatePlacement(p,objects)&&!inClearing(x,z)){stumps.push(p);objects.push(p);}}
+export const waterRocks:Plant[]=[];
+for(const t of [.08,.18,.28,.34,.81,.88,.93]){const p=waterwayPoint(0,t),d=waterwayPoint(0,t+.002).sub(p).normalize(),offset=waterWidthAt(0,t)*.7,x=p.x-d.y*offset,z=p.y+d.x*offset;if(isLake(x,z)||bridges.some(b=>Math.hypot(x-b.x,z-b.z)<b.length/2+.6))continue;waterRocks.push({id:'wet-rock-'+t,kind:'wet-rock',x,z,y:heightAt(x,z),s:.27,r:.3,rotation:t*20,variant:0});}
+export const worldLayout={trees,rocks,logs,stumps,obstacles:objects,reserve};
+export function detailAllowed(x:number,z:number,radius=.1){return insideIsland(x,z,.3)&&!isWater(x,z)&&distanceToTrail(x,z)>radius+.55&&!sites.some(o=>Math.hypot(x-o.x,z-o.z)<o.r)&&!objects.some(o=>o.kind!=='tree'&&Math.hypot(x-o.x,z-o.z)<o.r+radius);}
+export function validateWorld(){const findings:string[]=[],seen=new Set<string>(),accepted:Footprint[]=[...reserve];for(const p of [...trees,...rocks,...logs,...stumps]){const error=validatePlacement(p,accepted);if(error)findings.push(p.id+': '+error);if(Math.abs((p.y??0)-heightAt(p.x,p.z))>.001)findings.push(p.id+': invalid grounding');const key=p.x.toFixed(4)+','+p.z.toFixed(4);if(seen.has(key))findings.push(p.id+': duplicate');seen.add(key);accepted.push(p);}for(const b of bridges){if(isWater(...b.a)||isWater(...b.b))findings.push(b.id+': wet bank');if(b.y<=.16)findings.push(b.id+': submerged');}for(const p of waterRocks){if(!insideIsland(p.x,p.z,p.r)||!Number.isFinite(p.y))findings.push(p.id+': invalid wet-rock');}return{findings,counts:{trees:trees.length,rocks:rocks.length,logs:logs.length,stumps:stumps.length,bridges:bridges.length},terrainGrid:GRID,seed:47023,terrainVariation:terrainNoise(2,3)};}

@@ -1,0 +1,13 @@
+{
+  "findings": [],
+  "counts": {
+    "trees": 277,
+    "rocks": 190,
+    "logs": 17,
+    "stumps": 32,
+    "bridges": 4
+  },
+  "terrainGrid": 0.4,
+  "seed": 47023,
+  "terrainVariation": -0.04845953949687298
+}

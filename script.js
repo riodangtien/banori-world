@@ -33,14 +33,17 @@ function updateForest(name){
     requestAnimationFrame(()=>conceptScroll.scrollTop=0);
   }
   screens.forEach(screen=>screen.inert=screen.dataset.screen!==name);
+  forest.contentWindow?.postMessage({type:'banori-visible',visible:name==='watery'},location.origin);
 }
 forest.addEventListener('load',()=>{
   const frameWindow=forest.contentWindow;
+  frameWindow.postMessage({type:'banori-visible',visible:activeScreen==='watery'},location.origin);
   frameWindow.addEventListener('keydown',event=>{
     const movement={ArrowDown:60,ArrowUp:-60,PageDown:worldScroll.clientHeight*.85,PageUp:-worldScroll.clientHeight*.85,' ':worldScroll.clientHeight*.85}[event.key];
-    if(movement){event.preventDefault();worldScroll.scrollBy({top:movement,behavior:'smooth'});}
+    if(movement&&!document.body.classList.contains('world-playing')){event.preventDefault();worldScroll.scrollBy({top:movement,behavior:'smooth'});}
   },true);
 });
 showScreen(location.hash==='#concept'?'concept':['#world','#watery'].includes(location.hash)?'watery':'home',false);
 if(location.hash==='#watery')worldScroll.scrollTop=document.querySelector('.watery-board').offsetTop;
 
+window.addEventListener('message',event=>{if(event.origin!==location.origin||event.source!==forest.contentWindow||event.data?.type!=='banori-play')return;document.body.classList.toggle('world-playing',Boolean(event.data.active));});

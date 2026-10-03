@@ -1,0 +1,15 @@
+{
+  "name": "Man in Long Sleeves",
+  "author": "Quaternius (Tomás Laulhé)",
+  "license": "CC0-1.0",
+  "source": "https://poly.pizza/m/DLptRuewTn",
+  "download": "https://static.poly.pizza/e6019b9f-aed0-400c-8df4-ce5b648e9b82.glb",
+  "originalSha256": "48536b0e0ea375f0831dbf5154b4c2eafda8b6c9c19ba0996dd298f2fcc9164c",
+  "runtimeSha256": "4b7fc1281b115e9b17956e7009cb8b4329672bbb372221106a7685335bff409d",
+  "retainedClips": [
+    "Idle",
+    "Walk",
+    "Run",
+    "Jump"
+  ]
+}

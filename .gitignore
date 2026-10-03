@@ -1,0 +1,4 @@
+world-src/node_modules/
+world-src/*.tsbuildinfo
+world-src/test-results/
+world-src/dist/

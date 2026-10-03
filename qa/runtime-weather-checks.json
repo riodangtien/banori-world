@@ -1,0 +1,194 @@
+[
+  {
+    "state": "snow-a",
+    "diagnostics": {
+      "findings": [],
+      "counts": {
+        "trees": 286,
+        "rocks": 190,
+        "logs": 20,
+        "stumps": 32,
+        "bridges": 4
+      },
+      "terrainGrid": 0.4,
+      "seed": 47023,
+      "terrainVariation": -0.04845953949687298,
+      "invalidTransforms": [],
+      "animals": [
+        {
+          "name": "wildlife-deer",
+          "x": -16.851265802024038,
+          "z": -12.077706881357907,
+          "groundGap": 0
+        },
+        {
+          "name": "wildlife-fox",
+          "x": 20.896978965468154,
+          "z": 4.775478731680275,
+          "groundGap": 0
+        }
+      ],
+      "weather": [
+        {
+          "name": "weather-snow",
+          "time": 92.92990000000657,
+          "firstParticle": [
+            -7.7415690422058105,
+            12.145875930786133,
+            -4.0342864990234375
+          ]
+        }
+      ],
+      "fps": 60,
+      "drawCalls": 143,
+      "triangles": 159991,
+      "geometries": 95,
+      "textures": 15
+    }
+  },
+  {
+    "state": "snow-b",
+    "diagnostics": {
+      "findings": [],
+      "counts": {
+        "trees": 286,
+        "rocks": 190,
+        "logs": 20,
+        "stumps": 32,
+        "bridges": 4
+      },
+      "terrainGrid": 0.4,
+      "seed": 47023,
+      "terrainVariation": -0.04845953949687298,
+      "invalidTransforms": [],
+      "animals": [
+        {
+          "name": "wildlife-deer",
+          "x": -14.92307903245035,
+          "z": -12.528778434374372,
+          "groundGap": 0
+        },
+        {
+          "name": "wildlife-fox",
+          "x": 20.88871254102598,
+          "z": 4.469975849529177,
+          "groundGap": 0
+        }
+      ],
+      "weather": [
+        {
+          "name": "weather-snow",
+          "time": 183.42690000000314,
+          "firstParticle": [
+            -8.149125099182129,
+            4.3935418128967285,
+            -5.314970970153809
+          ]
+        }
+      ],
+      "fps": 60,
+      "drawCalls": 143,
+      "triangles": 159991,
+      "geometries": 95,
+      "textures": 15
+    }
+  },
+  {
+    "state": "rain-a",
+    "diagnostics": {
+      "findings": [],
+      "counts": {
+        "trees": 286,
+        "rocks": 190,
+        "logs": 20,
+        "stumps": 32,
+        "bridges": 4
+      },
+      "terrainGrid": 0.4,
+      "seed": 47023,
+      "terrainVariation": -0.04845953949687298,
+      "invalidTransforms": [],
+      "animals": [
+        {
+          "name": "wildlife-deer",
+          "x": -15.7451325171932,
+          "z": -12.797570608938482,
+          "groundGap": -0.005
+        },
+        {
+          "name": "wildlife-fox",
+          "x": 21.610513786493758,
+          "z": 4.841912409498152,
+          "groundGap": -0.001
+        }
+      ],
+      "weather": [
+        {
+          "name": "weather-rain",
+          "time": 239.77560000000588,
+          "firstParticle": [
+            -7.812216281890869,
+            15.373089790344238,
+            -4.995312690734863
+          ]
+        }
+      ],
+      "fps": 60,
+      "drawCalls": 143,
+      "triangles": 159991,
+      "geometries": 96,
+      "textures": 15
+    }
+  },
+  {
+    "state": "rain-paused",
+    "diagnostics": {
+      "findings": [],
+      "counts": {
+        "trees": 286,
+        "rocks": 190,
+        "logs": 20,
+        "stumps": 32,
+        "bridges": 4
+      },
+      "terrainGrid": 0.4,
+      "seed": 47023,
+      "terrainVariation": -0.04845953949687298,
+      "invalidTransforms": [],
+      "animals": [
+        {
+          "name": "wildlife-deer",
+          "x": -15.960331843124525,
+          "z": -12.534657334919913,
+          "groundGap": -0.002
+        },
+        {
+          "name": "wildlife-fox",
+          "x": 21.1381711685376,
+          "z": 4.823432071860087,
+          "groundGap": 0
+        }
+      ],
+      "weather": [
+        {
+          "name": "weather-rain",
+          "time": 241.2756999999997,
+          "firstParticle": [
+            -7.407130718231201,
+            10.806936264038086,
+            -5.194505214691162
+          ]
+        }
+      ],
+      "fps": 60,
+      "drawCalls": 143,
+      "triangles": 159991,
+      "geometries": 96,
+      "textures": 15
+    }
+  },
+  {
+    "state": "snow-select-resumes",
+    "control": true
+  }
+]

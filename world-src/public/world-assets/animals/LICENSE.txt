@@ -1,0 +1,6 @@
+Quaternius Ultimate Animated Animals
+CC0 1.0 Universal
+Official source: https://quaternius.com/packs/ultimateanimatedanimals.html
+Official public glTF download folder: https://drive.google.com/drive/folders/1yJXdB1iSrI8Db7hG77zxZ66vKsqIt0ry
+Deer and Fox retained geometry, rig, materials and four ambient clips; unused animation data removed and packed as GLB.
+https://creativecommons.org/publicdomain/zero/1.0/

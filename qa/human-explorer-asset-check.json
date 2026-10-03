@@ -1,0 +1,32 @@
+{
+  "bytes": 471696,
+  "clips": [
+    {
+      "name": "Idle",
+      "duration": 4.166666507720947,
+      "tracks": 12,
+      "finitePose": true
+    },
+    {
+      "name": "Walk",
+      "duration": 1.0416666269302368,
+      "tracks": 24,
+      "finitePose": true
+    },
+    {
+      "name": "Run",
+      "duration": 0.875,
+      "tracks": 20,
+      "finitePose": true
+    },
+    {
+      "name": "Jump",
+      "duration": 1.0416666269302368,
+      "tracks": 24,
+      "finitePose": true
+    }
+  ],
+  "normalizedHeight": 1.7,
+  "riggedMeshes": 5,
+  "rigidMeshes": 0
+}
