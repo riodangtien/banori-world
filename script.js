@@ -11,6 +11,16 @@ document.querySelectorAll('[data-trailer]').forEach(button=>button.addEventListe
 
 const worldScroll=document.querySelector('.world-scroll');
 const forest=document.querySelector('.forest-frame');
+let forestScrollFrame=0;
+function sendForestVisibility(){
+  const rect=forest.getBoundingClientRect(),viewport=worldScroll.getBoundingClientRect();
+  const overlap=Math.max(0,Math.min(rect.bottom,viewport.bottom)-Math.max(rect.top,viewport.top));
+  const fraction=activeScreen==='watery'?Math.min(1,overlap/Math.max(1,Math.min(rect.height,viewport.height))):0;
+  forest.contentWindow?.postMessage({type:'banori-visible',visible:fraction>0,volume:fraction*fraction},location.origin);
+}
+worldScroll.addEventListener('scroll',()=>{if(!forestScrollFrame)forestScrollFrame=requestAnimationFrame(()=>{forestScrollFrame=0;sendForestVisibility();});},{passive:true});
+window.addEventListener('resize',sendForestVisibility);
+for(const event of ['pointerdown','keydown'])document.addEventListener(event,()=>{forest.contentWindow?.postMessage({type:'banori-audio-start'},location.origin);},{passive:true});
 const conceptScreen=document.querySelector('.concept-screen');
 const conceptBoard=document.querySelector('.concept-board');
 const conceptScroll=document.createElement('div');
@@ -33,11 +43,12 @@ function updateForest(name){
     requestAnimationFrame(()=>conceptScroll.scrollTop=0);
   }
   screens.forEach(screen=>screen.inert=screen.dataset.screen!==name);
-  forest.contentWindow?.postMessage({type:'banori-visible',visible:name==='watery'},location.origin);
+  sendForestVisibility();
 }
 forest.addEventListener('load',()=>{
   const frameWindow=forest.contentWindow;
-  frameWindow.postMessage({type:'banori-visible',visible:activeScreen==='watery'},location.origin);
+  sendForestVisibility();
+  if(navigator.userActivation?.hasBeenActive)frameWindow.postMessage({type:'banori-audio-start'},location.origin);
   frameWindow.addEventListener('keydown',event=>{
     const movement={ArrowDown:60,ArrowUp:-60,PageDown:worldScroll.clientHeight*.85,PageUp:-worldScroll.clientHeight*.85,' ':worldScroll.clientHeight*.85}[event.key];
     if(movement&&!document.body.classList.contains('world-playing')){event.preventDefault();worldScroll.scrollBy({top:movement,behavior:'smooth'});}
@@ -47,3 +58,4 @@ showScreen(location.hash==='#concept'?'concept':['#world','#watery'].includes(lo
 if(location.hash==='#watery')worldScroll.scrollTop=document.querySelector('.watery-board').offsetTop;
 
 window.addEventListener('message',event=>{if(event.origin!==location.origin||event.source!==forest.contentWindow||event.data?.type!=='banori-play')return;document.body.classList.toggle('world-playing',Boolean(event.data.active));});
+window.addEventListener('message',event=>{if(event.origin!==location.origin||event.source!==forest.contentWindow||event.data?.type!=='banori-audio-health')return;forest.dataset.audioVolume=String(event.data.volume);forest.dataset.audioLevel=String(event.data.level);forest.dataset.audioCalls=String(event.data.calls);});
