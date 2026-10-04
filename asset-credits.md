@@ -29,3 +29,7 @@ Man in Long Sleeves by Tomás Laulhé (Quaternius), from the [creator's Poly Piz
 VBVK.svg and logodonsac.svg are supplied by the project owner. The kingdom battlefield preview (Assets/go_stage07_bg-1.webp) comes from the owner's [Vệ Binh Vương Quốc UI demo](https://github.com/riodangtien/game2d-ui-demo). It is used as a preview only; no new license claim is made for the original game artwork. The game description and instructions follow the repository README. The project button links to the repository because its GitHub Pages endpoint currently returns 404.
 
 Local fonts: Space Grotesk and Barlow Condensed by their respective authors, distributed under the SIL Open Font License. License files are included in assets/fonts. Sources: https://github.com/google/fonts/tree/main/ofl/spacegrotesk and https://github.com/google/fonts/tree/main/ofl/barlowcondensed.
+
+Navigation background: assets/thanhdieuhuong.svg supplied by the project owner, used as the illustrated sky navigation background.
+
+Navigation sky v2: original background illustration generated with the built-in ImageGen tool for this project. Replaces the illustrated navigation background in the current UI.
