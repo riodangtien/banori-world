@@ -1,0 +1,1877 @@
+[
+  {
+    "id": "g1-number-0",
+    "grade": 1,
+    "zone": "number",
+    "difficulty": "easy",
+    "skill": "Cộng trong phạm vi 20",
+    "prompt": "Giỏ A có 3 quả chuối, giỏ B có 2 quả. Cả hai giỏ có bao nhiêu quả?",
+    "answers": [
+      "5",
+      "6",
+      "4",
+      "7"
+    ],
+    "correct": 0,
+    "value": 5,
+    "hint": "Đếm hai nhóm rồi cộng lại.",
+    "explanation": "3 + 2 = 5 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "add",
+      "a": 3,
+      "b": 2
+    }
+  },
+  {
+    "id": "g1-shape-0",
+    "grade": 1,
+    "zone": "shape",
+    "difficulty": "easy",
+    "skill": "Nhận biết cạnh của hình",
+    "prompt": "Biển tam giác có bao nhiêu cạnh thẳng?",
+    "answers": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "correct": 0,
+    "value": 3,
+    "hint": "Chỉ đếm các cạnh thẳng; hình tròn không có cạnh thẳng.",
+    "explanation": "Tam giác có 3 cạnh thẳng.",
+    "scene": {
+      "zone": "shape",
+      "operation": "sides",
+      "shape": "triangle",
+      "a": 3,
+      "b": 0,
+      "copies": 1
+    }
+  },
+  {
+    "id": "g1-measure-0",
+    "grade": 1,
+    "zone": "measure",
+    "difficulty": "easy",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 3 m, đoạn B dài 2 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "5 m",
+      "6 m",
+      "4 m",
+      "7 m"
+    ],
+    "correct": 0,
+    "value": 5,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "3 + 2 = 5 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 3,
+      "b": 2,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g1-number-1",
+    "grade": 1,
+    "zone": "number",
+    "difficulty": "easy",
+    "skill": "Cộng trong phạm vi 20",
+    "prompt": "Giỏ A có 4 quả chuối, giỏ B có 3 quả. Cả hai giỏ có bao nhiêu quả?",
+    "answers": [
+      "7",
+      "8",
+      "6",
+      "9"
+    ],
+    "correct": 0,
+    "value": 7,
+    "hint": "Đếm hai nhóm rồi cộng lại.",
+    "explanation": "4 + 3 = 7 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "add",
+      "a": 4,
+      "b": 3
+    }
+  },
+  {
+    "id": "g1-shape-1",
+    "grade": 1,
+    "zone": "shape",
+    "difficulty": "easy",
+    "skill": "Nhận biết cạnh của hình",
+    "prompt": "Biển hình vuông có bao nhiêu cạnh thẳng?",
+    "answers": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "correct": 0,
+    "value": 4,
+    "hint": "Chỉ đếm các cạnh thẳng; hình tròn không có cạnh thẳng.",
+    "explanation": "Hình vuông có 4 cạnh thẳng.",
+    "scene": {
+      "zone": "shape",
+      "operation": "sides",
+      "shape": "square",
+      "a": 4,
+      "b": 0,
+      "copies": 1
+    }
+  },
+  {
+    "id": "g1-measure-1",
+    "grade": 1,
+    "zone": "measure",
+    "difficulty": "easy",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 4 m, đoạn B dài 2 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "6 m",
+      "7 m",
+      "5 m",
+      "8 m"
+    ],
+    "correct": 0,
+    "value": 6,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "4 + 2 = 6 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 4,
+      "b": 2,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g1-number-2",
+    "grade": 1,
+    "zone": "number",
+    "difficulty": "medium",
+    "skill": "Cộng trong phạm vi 20",
+    "prompt": "Giỏ A có 5 quả chuối, giỏ B có 4 quả. Cả hai giỏ có bao nhiêu quả?",
+    "answers": [
+      "9",
+      "10",
+      "8",
+      "11"
+    ],
+    "correct": 0,
+    "value": 9,
+    "hint": "Đếm hai nhóm rồi cộng lại.",
+    "explanation": "5 + 4 = 9 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "add",
+      "a": 5,
+      "b": 4
+    }
+  },
+  {
+    "id": "g1-shape-2",
+    "grade": 1,
+    "zone": "shape",
+    "difficulty": "medium",
+    "skill": "Nhận biết cạnh của hình",
+    "prompt": "Biển hình chữ nhật có bao nhiêu cạnh thẳng?",
+    "answers": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "correct": 0,
+    "value": 4,
+    "hint": "Chỉ đếm các cạnh thẳng; hình tròn không có cạnh thẳng.",
+    "explanation": "Hình chữ nhật có 4 cạnh thẳng.",
+    "scene": {
+      "zone": "shape",
+      "operation": "sides",
+      "shape": "rectangle",
+      "a": 4,
+      "b": 0,
+      "copies": 1
+    }
+  },
+  {
+    "id": "g1-measure-2",
+    "grade": 1,
+    "zone": "measure",
+    "difficulty": "medium",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 5 m, đoạn B dài 2 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "7 m",
+      "8 m",
+      "6 m",
+      "9 m"
+    ],
+    "correct": 0,
+    "value": 7,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "5 + 2 = 7 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 5,
+      "b": 2,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g1-number-3",
+    "grade": 1,
+    "zone": "number",
+    "difficulty": "medium",
+    "skill": "Trừ trong phạm vi 20",
+    "prompt": "Có 11 quả chuối. Lấy ra 5 quả. Còn bao nhiêu quả?",
+    "answers": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "correct": 0,
+    "value": 6,
+    "hint": "Bớt nhóm đã lấy ra khỏi tổng.",
+    "explanation": "11 − 5 = 6 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "subtract",
+      "a": 11,
+      "b": 5
+    }
+  },
+  {
+    "id": "g1-shape-3",
+    "grade": 1,
+    "zone": "shape",
+    "difficulty": "medium",
+    "skill": "Nhận biết cạnh của hình",
+    "prompt": "Biển hình tròn có bao nhiêu cạnh thẳng?",
+    "answers": [
+      "0",
+      "1",
+      "3",
+      "2"
+    ],
+    "correct": 0,
+    "value": 0,
+    "hint": "Chỉ đếm các cạnh thẳng; hình tròn không có cạnh thẳng.",
+    "explanation": "Hình tròn có 0 cạnh thẳng.",
+    "scene": {
+      "zone": "shape",
+      "operation": "sides",
+      "shape": "circle",
+      "a": 0,
+      "b": 0,
+      "copies": 1
+    }
+  },
+  {
+    "id": "g1-measure-3",
+    "grade": 1,
+    "zone": "measure",
+    "difficulty": "medium",
+    "skill": "So sánh độ dài",
+    "prompt": "Đoạn A dài 8 m, đoạn B dài 2 m. Đoạn A dài hơn bao nhiêu?",
+    "answers": [
+      "6 m",
+      "7 m",
+      "5 m",
+      "8 m"
+    ],
+    "correct": 0,
+    "value": 6,
+    "hint": "Lấy đoạn dài trừ đoạn ngắn.",
+    "explanation": "8 − 2 = 6 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "subtract",
+      "a": 8,
+      "b": 2,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g1-number-4",
+    "grade": 1,
+    "zone": "number",
+    "difficulty": "hard",
+    "skill": "Trừ trong phạm vi 20",
+    "prompt": "Có 13 quả chuối. Lấy ra 6 quả. Còn bao nhiêu quả?",
+    "answers": [
+      "7",
+      "8",
+      "6",
+      "9"
+    ],
+    "correct": 0,
+    "value": 7,
+    "hint": "Bớt nhóm đã lấy ra khỏi tổng.",
+    "explanation": "13 − 6 = 7 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "subtract",
+      "a": 13,
+      "b": 6
+    }
+  },
+  {
+    "id": "g1-shape-4",
+    "grade": 1,
+    "zone": "shape",
+    "difficulty": "hard",
+    "skill": "Nhận biết cạnh của hình",
+    "prompt": "Có 2 biển tam giác. Cả hai có tổng cộng bao nhiêu cạnh thẳng?",
+    "answers": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "correct": 0,
+    "value": 6,
+    "hint": "Chỉ đếm các cạnh thẳng; hình tròn không có cạnh thẳng.",
+    "explanation": "2 × 3 = 6 cạnh thẳng.",
+    "scene": {
+      "zone": "shape",
+      "operation": "sides",
+      "shape": "triangle",
+      "a": 6,
+      "b": 0,
+      "copies": 2
+    }
+  },
+  {
+    "id": "g1-measure-4",
+    "grade": 1,
+    "zone": "measure",
+    "difficulty": "hard",
+    "skill": "So sánh độ dài",
+    "prompt": "Đoạn A dài 9 m, đoạn B dài 2 m. Đoạn A dài hơn bao nhiêu?",
+    "answers": [
+      "7 m",
+      "8 m",
+      "6 m",
+      "9 m"
+    ],
+    "correct": 0,
+    "value": 7,
+    "hint": "Lấy đoạn dài trừ đoạn ngắn.",
+    "explanation": "9 − 2 = 7 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "subtract",
+      "a": 9,
+      "b": 2,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g2-number-0",
+    "grade": 2,
+    "zone": "number",
+    "difficulty": "easy",
+    "skill": "Cộng hai nhóm",
+    "prompt": "Giỏ A có 8 quả, giỏ B có 4 quả. Tổng cộng bao nhiêu quả chuối?",
+    "answers": [
+      "12",
+      "13",
+      "11",
+      "14"
+    ],
+    "correct": 0,
+    "value": 12,
+    "hint": "Cộng số quả trong hai giỏ.",
+    "explanation": "8 + 4 = 12 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "add",
+      "a": 8,
+      "b": 4
+    }
+  },
+  {
+    "id": "g2-shape-0",
+    "grade": 2,
+    "zone": "shape",
+    "difficulty": "easy",
+    "skill": "Nhận biết cạnh của hình",
+    "prompt": "Biển tam giác có bao nhiêu cạnh thẳng?",
+    "answers": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "correct": 0,
+    "value": 3,
+    "hint": "Chỉ đếm các cạnh thẳng; hình tròn không có cạnh thẳng.",
+    "explanation": "Tam giác có 3 cạnh thẳng.",
+    "scene": {
+      "zone": "shape",
+      "operation": "sides",
+      "shape": "triangle",
+      "a": 3,
+      "b": 0,
+      "copies": 1
+    }
+  },
+  {
+    "id": "g2-measure-0",
+    "grade": 2,
+    "zone": "measure",
+    "difficulty": "easy",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 6 m, đoạn B dài 2 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "8 m",
+      "9 m",
+      "7 m",
+      "10 m"
+    ],
+    "correct": 0,
+    "value": 8,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "6 + 2 = 8 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 6,
+      "b": 2,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g2-number-1",
+    "grade": 2,
+    "zone": "number",
+    "difficulty": "easy",
+    "skill": "Cộng hai nhóm",
+    "prompt": "Giỏ A có 9 quả, giỏ B có 5 quả. Tổng cộng bao nhiêu quả chuối?",
+    "answers": [
+      "14",
+      "15",
+      "13",
+      "16"
+    ],
+    "correct": 0,
+    "value": 14,
+    "hint": "Cộng số quả trong hai giỏ.",
+    "explanation": "9 + 5 = 14 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "add",
+      "a": 9,
+      "b": 5
+    }
+  },
+  {
+    "id": "g2-shape-1",
+    "grade": 2,
+    "zone": "shape",
+    "difficulty": "easy",
+    "skill": "Nhận biết cạnh của hình",
+    "prompt": "Biển hình vuông có bao nhiêu cạnh thẳng?",
+    "answers": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "correct": 0,
+    "value": 4,
+    "hint": "Chỉ đếm các cạnh thẳng; hình tròn không có cạnh thẳng.",
+    "explanation": "Hình vuông có 4 cạnh thẳng.",
+    "scene": {
+      "zone": "shape",
+      "operation": "sides",
+      "shape": "square",
+      "a": 4,
+      "b": 0,
+      "copies": 1
+    }
+  },
+  {
+    "id": "g2-measure-1",
+    "grade": 2,
+    "zone": "measure",
+    "difficulty": "easy",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 7 m, đoạn B dài 3 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "10 m",
+      "11 m",
+      "9 m",
+      "12 m"
+    ],
+    "correct": 0,
+    "value": 10,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "7 + 3 = 10 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 7,
+      "b": 3,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g2-number-2",
+    "grade": 2,
+    "zone": "number",
+    "difficulty": "medium",
+    "skill": "Nhân với 2",
+    "prompt": "Có 2 giỏ, mỗi giỏ có 6 quả chuối. Có tất cả bao nhiêu quả?",
+    "answers": [
+      "12",
+      "13",
+      "11",
+      "14"
+    ],
+    "correct": 0,
+    "value": 12,
+    "hint": "Cộng hai nhóm bằng nhau.",
+    "explanation": "2 × 6 = 12 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "multiply",
+      "a": 2,
+      "b": 6
+    }
+  },
+  {
+    "id": "g2-shape-2",
+    "grade": 2,
+    "zone": "shape",
+    "difficulty": "medium",
+    "skill": "Nhận biết cạnh của hình",
+    "prompt": "Biển hình chữ nhật có bao nhiêu cạnh thẳng?",
+    "answers": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "correct": 0,
+    "value": 4,
+    "hint": "Chỉ đếm các cạnh thẳng; hình tròn không có cạnh thẳng.",
+    "explanation": "Hình chữ nhật có 4 cạnh thẳng.",
+    "scene": {
+      "zone": "shape",
+      "operation": "sides",
+      "shape": "rectangle",
+      "a": 4,
+      "b": 0,
+      "copies": 1
+    }
+  },
+  {
+    "id": "g2-measure-2",
+    "grade": 2,
+    "zone": "measure",
+    "difficulty": "medium",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 8 m, đoạn B dài 4 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "12 m",
+      "13 m",
+      "11 m",
+      "14 m"
+    ],
+    "correct": 0,
+    "value": 12,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "8 + 4 = 12 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 8,
+      "b": 4,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g2-number-3",
+    "grade": 2,
+    "zone": "number",
+    "difficulty": "medium",
+    "skill": "Nhân với 2",
+    "prompt": "Có 2 giỏ, mỗi giỏ có 7 quả chuối. Có tất cả bao nhiêu quả?",
+    "answers": [
+      "14",
+      "15",
+      "13",
+      "16"
+    ],
+    "correct": 0,
+    "value": 14,
+    "hint": "Cộng hai nhóm bằng nhau.",
+    "explanation": "2 × 7 = 14 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "multiply",
+      "a": 2,
+      "b": 7
+    }
+  },
+  {
+    "id": "g2-shape-3",
+    "grade": 2,
+    "zone": "shape",
+    "difficulty": "medium",
+    "skill": "Nhận biết cạnh của hình",
+    "prompt": "Biển hình tròn có bao nhiêu cạnh thẳng?",
+    "answers": [
+      "0",
+      "1",
+      "3",
+      "2"
+    ],
+    "correct": 0,
+    "value": 0,
+    "hint": "Chỉ đếm các cạnh thẳng; hình tròn không có cạnh thẳng.",
+    "explanation": "Hình tròn có 0 cạnh thẳng.",
+    "scene": {
+      "zone": "shape",
+      "operation": "sides",
+      "shape": "circle",
+      "a": 0,
+      "b": 0,
+      "copies": 1
+    }
+  },
+  {
+    "id": "g2-measure-3",
+    "grade": 2,
+    "zone": "measure",
+    "difficulty": "medium",
+    "skill": "So sánh độ dài",
+    "prompt": "Đoạn A dài 14 m, đoạn B dài 5 m. Đoạn A dài hơn bao nhiêu?",
+    "answers": [
+      "9 m",
+      "10 m",
+      "8 m",
+      "11 m"
+    ],
+    "correct": 0,
+    "value": 9,
+    "hint": "Lấy đoạn dài trừ đoạn ngắn.",
+    "explanation": "14 − 5 = 9 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "subtract",
+      "a": 14,
+      "b": 5,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g2-number-4",
+    "grade": 2,
+    "zone": "number",
+    "difficulty": "hard",
+    "skill": "Chia đều cho 2",
+    "prompt": "Chia đều 20 quả chuối vào 2 giỏ. Mỗi giỏ có bao nhiêu quả?",
+    "answers": [
+      "10",
+      "11",
+      "9",
+      "12"
+    ],
+    "correct": 0,
+    "value": 10,
+    "hint": "Chia tổng số quả thành hai phần bằng nhau.",
+    "explanation": "20 ÷ 2 = 10 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "divide",
+      "a": 20,
+      "b": 2
+    }
+  },
+  {
+    "id": "g2-shape-4",
+    "grade": 2,
+    "zone": "shape",
+    "difficulty": "hard",
+    "skill": "Nhận biết cạnh của hình",
+    "prompt": "Có 2 biển tam giác. Cả hai có tổng cộng bao nhiêu cạnh thẳng?",
+    "answers": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "correct": 0,
+    "value": 6,
+    "hint": "Chỉ đếm các cạnh thẳng; hình tròn không có cạnh thẳng.",
+    "explanation": "2 × 3 = 6 cạnh thẳng.",
+    "scene": {
+      "zone": "shape",
+      "operation": "sides",
+      "shape": "triangle",
+      "a": 6,
+      "b": 0,
+      "copies": 2
+    }
+  },
+  {
+    "id": "g2-measure-4",
+    "grade": 2,
+    "zone": "measure",
+    "difficulty": "hard",
+    "skill": "So sánh độ dài",
+    "prompt": "Đoạn A dài 16 m, đoạn B dài 6 m. Đoạn A dài hơn bao nhiêu?",
+    "answers": [
+      "10 m",
+      "11 m",
+      "9 m",
+      "12 m"
+    ],
+    "correct": 0,
+    "value": 10,
+    "hint": "Lấy đoạn dài trừ đoạn ngắn.",
+    "explanation": "16 − 6 = 10 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "subtract",
+      "a": 16,
+      "b": 6,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g3-number-0",
+    "grade": 3,
+    "zone": "number",
+    "difficulty": "easy",
+    "skill": "Nhân các nhóm bằng nhau",
+    "prompt": "Có 3 giỏ, mỗi giỏ có 4 quả chuối. Tổng cộng có bao nhiêu quả?",
+    "answers": [
+      "12",
+      "13",
+      "11",
+      "14"
+    ],
+    "correct": 0,
+    "value": 12,
+    "hint": "Nhân số giỏ với số quả mỗi giỏ.",
+    "explanation": "3 × 4 = 12 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "multiply",
+      "a": 3,
+      "b": 4
+    }
+  },
+  {
+    "id": "g3-shape-0",
+    "grade": 3,
+    "zone": "shape",
+    "difficulty": "easy",
+    "skill": "Chu vi hình chữ nhật, hình vuông",
+    "prompt": "Bảng hình chữ nhật có hai kích thước 3 cm và 2 cm. Chu vi là bao nhiêu?",
+    "answers": [
+      "10 cm",
+      "11 cm",
+      "9 cm",
+      "12 cm"
+    ],
+    "correct": 0,
+    "value": 10,
+    "hint": "Cộng chiều dài và chiều rộng rồi nhân hai.",
+    "explanation": "(3 + 2) × 2 = 10 cm.",
+    "scene": {
+      "zone": "shape",
+      "operation": "perimeter",
+      "shape": "rectangle",
+      "a": 3,
+      "b": 2,
+      "unit": "cm"
+    }
+  },
+  {
+    "id": "g3-measure-0",
+    "grade": 3,
+    "zone": "measure",
+    "difficulty": "easy",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 9 m, đoạn B dài 2 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "11 m",
+      "12 m",
+      "10 m",
+      "13 m"
+    ],
+    "correct": 0,
+    "value": 11,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "9 + 2 = 11 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 9,
+      "b": 2,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g3-number-1",
+    "grade": 3,
+    "zone": "number",
+    "difficulty": "easy",
+    "skill": "Nhân các nhóm bằng nhau",
+    "prompt": "Có 3 giỏ, mỗi giỏ có 5 quả chuối. Tổng cộng có bao nhiêu quả?",
+    "answers": [
+      "15",
+      "16",
+      "14",
+      "17"
+    ],
+    "correct": 0,
+    "value": 15,
+    "hint": "Nhân số giỏ với số quả mỗi giỏ.",
+    "explanation": "3 × 5 = 15 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "multiply",
+      "a": 3,
+      "b": 5
+    }
+  },
+  {
+    "id": "g3-shape-1",
+    "grade": 3,
+    "zone": "shape",
+    "difficulty": "easy",
+    "skill": "Chu vi hình chữ nhật, hình vuông",
+    "prompt": "Bảng hình vuông có hai kích thước 4 cm và 4 cm. Chu vi là bao nhiêu?",
+    "answers": [
+      "16 cm",
+      "17 cm",
+      "15 cm",
+      "18 cm"
+    ],
+    "correct": 0,
+    "value": 16,
+    "hint": "Cộng chiều dài và chiều rộng rồi nhân hai.",
+    "explanation": "(4 + 4) × 2 = 16 cm.",
+    "scene": {
+      "zone": "shape",
+      "operation": "perimeter",
+      "shape": "square",
+      "a": 4,
+      "b": 4,
+      "unit": "cm"
+    }
+  },
+  {
+    "id": "g3-measure-1",
+    "grade": 3,
+    "zone": "measure",
+    "difficulty": "easy",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 10 m, đoạn B dài 3 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "13 m",
+      "14 m",
+      "12 m",
+      "15 m"
+    ],
+    "correct": 0,
+    "value": 13,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "10 + 3 = 13 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 10,
+      "b": 3,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g3-number-2",
+    "grade": 3,
+    "zone": "number",
+    "difficulty": "medium",
+    "skill": "Nhân các nhóm bằng nhau",
+    "prompt": "Có 3 giỏ, mỗi giỏ có 6 quả chuối. Tổng cộng có bao nhiêu quả?",
+    "answers": [
+      "18",
+      "19",
+      "17",
+      "20"
+    ],
+    "correct": 0,
+    "value": 18,
+    "hint": "Nhân số giỏ với số quả mỗi giỏ.",
+    "explanation": "3 × 6 = 18 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "multiply",
+      "a": 3,
+      "b": 6
+    }
+  },
+  {
+    "id": "g3-shape-2",
+    "grade": 3,
+    "zone": "shape",
+    "difficulty": "medium",
+    "skill": "Chu vi hình chữ nhật, hình vuông",
+    "prompt": "Bảng hình chữ nhật có hai kích thước 5 cm và 4 cm. Chu vi là bao nhiêu?",
+    "answers": [
+      "18 cm",
+      "19 cm",
+      "17 cm",
+      "20 cm"
+    ],
+    "correct": 0,
+    "value": 18,
+    "hint": "Cộng chiều dài và chiều rộng rồi nhân hai.",
+    "explanation": "(5 + 4) × 2 = 18 cm.",
+    "scene": {
+      "zone": "shape",
+      "operation": "perimeter",
+      "shape": "rectangle",
+      "a": 5,
+      "b": 4,
+      "unit": "cm"
+    }
+  },
+  {
+    "id": "g3-measure-2",
+    "grade": 3,
+    "zone": "measure",
+    "difficulty": "medium",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 11 m, đoạn B dài 4 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "15 m",
+      "16 m",
+      "14 m",
+      "17 m"
+    ],
+    "correct": 0,
+    "value": 15,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "11 + 4 = 15 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 11,
+      "b": 4,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g3-number-3",
+    "grade": 3,
+    "zone": "number",
+    "difficulty": "medium",
+    "skill": "Phép chia hết",
+    "prompt": "Chia đều 18 quả chuối vào 3 giỏ. Mỗi giỏ có bao nhiêu quả?",
+    "answers": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "correct": 0,
+    "value": 6,
+    "hint": "Chia tổng số quả cho số giỏ.",
+    "explanation": "18 ÷ 3 = 6 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "divide",
+      "a": 18,
+      "b": 3
+    }
+  },
+  {
+    "id": "g3-shape-3",
+    "grade": 3,
+    "zone": "shape",
+    "difficulty": "medium",
+    "skill": "Chu vi hình chữ nhật, hình vuông",
+    "prompt": "Bảng hình vuông có hai kích thước 6 cm và 6 cm. Chu vi là bao nhiêu?",
+    "answers": [
+      "24 cm",
+      "25 cm",
+      "23 cm",
+      "26 cm"
+    ],
+    "correct": 0,
+    "value": 24,
+    "hint": "Cộng chiều dài và chiều rộng rồi nhân hai.",
+    "explanation": "(6 + 6) × 2 = 24 cm.",
+    "scene": {
+      "zone": "shape",
+      "operation": "perimeter",
+      "shape": "square",
+      "a": 6,
+      "b": 6,
+      "unit": "cm"
+    }
+  },
+  {
+    "id": "g3-measure-3",
+    "grade": 3,
+    "zone": "measure",
+    "difficulty": "medium",
+    "skill": "So sánh độ dài",
+    "prompt": "Đoạn A dài 17 m, đoạn B dài 5 m. Đoạn A dài hơn bao nhiêu?",
+    "answers": [
+      "12 m",
+      "13 m",
+      "11 m",
+      "14 m"
+    ],
+    "correct": 0,
+    "value": 12,
+    "hint": "Lấy đoạn dài trừ đoạn ngắn.",
+    "explanation": "17 − 5 = 12 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "subtract",
+      "a": 17,
+      "b": 5,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g3-number-4",
+    "grade": 3,
+    "zone": "number",
+    "difficulty": "hard",
+    "skill": "Phép chia hết",
+    "prompt": "Chia đều 20 quả chuối vào 4 giỏ. Mỗi giỏ có bao nhiêu quả?",
+    "answers": [
+      "5",
+      "6",
+      "4",
+      "7"
+    ],
+    "correct": 0,
+    "value": 5,
+    "hint": "Chia tổng số quả cho số giỏ.",
+    "explanation": "20 ÷ 4 = 5 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "divide",
+      "a": 20,
+      "b": 4
+    }
+  },
+  {
+    "id": "g3-shape-4",
+    "grade": 3,
+    "zone": "shape",
+    "difficulty": "hard",
+    "skill": "Chu vi hình chữ nhật, hình vuông",
+    "prompt": "Bảng hình chữ nhật có hai kích thước 7 cm và 6 cm. Chu vi là bao nhiêu?",
+    "answers": [
+      "26 cm",
+      "27 cm",
+      "25 cm",
+      "28 cm"
+    ],
+    "correct": 0,
+    "value": 26,
+    "hint": "Cộng chiều dài và chiều rộng rồi nhân hai.",
+    "explanation": "(7 + 6) × 2 = 26 cm.",
+    "scene": {
+      "zone": "shape",
+      "operation": "perimeter",
+      "shape": "rectangle",
+      "a": 7,
+      "b": 6,
+      "unit": "cm"
+    }
+  },
+  {
+    "id": "g3-measure-4",
+    "grade": 3,
+    "zone": "measure",
+    "difficulty": "hard",
+    "skill": "So sánh độ dài",
+    "prompt": "Đoạn A dài 19 m, đoạn B dài 6 m. Đoạn A dài hơn bao nhiêu?",
+    "answers": [
+      "13 m",
+      "14 m",
+      "12 m",
+      "15 m"
+    ],
+    "correct": 0,
+    "value": 13,
+    "hint": "Lấy đoạn dài trừ đoạn ngắn.",
+    "explanation": "19 − 6 = 13 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "subtract",
+      "a": 19,
+      "b": 6,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g4-number-0",
+    "grade": 4,
+    "zone": "number",
+    "difficulty": "easy",
+    "skill": "Phân số của một số",
+    "prompt": "Có 12 quả chuối. 1/2 số chuối là bao nhiêu quả?",
+    "answers": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "correct": 0,
+    "value": 6,
+    "hint": "Chia 12 cho mẫu số 2.",
+    "explanation": "12 × 1/2 = 6 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "fraction",
+      "a": 12,
+      "b": 2
+    }
+  },
+  {
+    "id": "g4-shape-0",
+    "grade": 4,
+    "zone": "shape",
+    "difficulty": "easy",
+    "skill": "Diện tích hình chữ nhật",
+    "prompt": "Bảng hình chữ nhật dài 4 cm, rộng 2 cm. Diện tích là bao nhiêu?",
+    "answers": [
+      "8 cm²",
+      "9 cm²",
+      "7 cm²",
+      "10 cm²"
+    ],
+    "correct": 0,
+    "value": 8,
+    "hint": "Nhân chiều dài với chiều rộng.",
+    "explanation": "4 × 2 = 8 cm².",
+    "scene": {
+      "zone": "shape",
+      "operation": "area",
+      "shape": "rectangle",
+      "a": 4,
+      "b": 2,
+      "unit": "cm²"
+    }
+  },
+  {
+    "id": "g4-measure-0",
+    "grade": 4,
+    "zone": "measure",
+    "difficulty": "easy",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 12 m, đoạn B dài 2 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "14 m",
+      "15 m",
+      "13 m",
+      "16 m"
+    ],
+    "correct": 0,
+    "value": 14,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "12 + 2 = 14 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 12,
+      "b": 2,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g4-number-1",
+    "grade": 4,
+    "zone": "number",
+    "difficulty": "easy",
+    "skill": "Phân số của một số",
+    "prompt": "Có 16 quả chuối. 1/4 số chuối là bao nhiêu quả?",
+    "answers": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "correct": 0,
+    "value": 4,
+    "hint": "Chia 16 cho mẫu số 4.",
+    "explanation": "16 × 1/4 = 4 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "fraction",
+      "a": 16,
+      "b": 4
+    }
+  },
+  {
+    "id": "g4-shape-1",
+    "grade": 4,
+    "zone": "shape",
+    "difficulty": "easy",
+    "skill": "Diện tích hình chữ nhật",
+    "prompt": "Bảng hình chữ nhật dài 5 cm, rộng 3 cm. Diện tích là bao nhiêu?",
+    "answers": [
+      "15 cm²",
+      "16 cm²",
+      "14 cm²",
+      "17 cm²"
+    ],
+    "correct": 0,
+    "value": 15,
+    "hint": "Nhân chiều dài với chiều rộng.",
+    "explanation": "5 × 3 = 15 cm².",
+    "scene": {
+      "zone": "shape",
+      "operation": "area",
+      "shape": "rectangle",
+      "a": 5,
+      "b": 3,
+      "unit": "cm²"
+    }
+  },
+  {
+    "id": "g4-measure-1",
+    "grade": 4,
+    "zone": "measure",
+    "difficulty": "easy",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 13 m, đoạn B dài 3 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "16 m",
+      "17 m",
+      "15 m",
+      "18 m"
+    ],
+    "correct": 0,
+    "value": 16,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "13 + 3 = 16 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 13,
+      "b": 3,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g4-number-2",
+    "grade": 4,
+    "zone": "number",
+    "difficulty": "medium",
+    "skill": "Phân số của một số",
+    "prompt": "Có 20 quả chuối. 1/5 số chuối là bao nhiêu quả?",
+    "answers": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "correct": 0,
+    "value": 4,
+    "hint": "Chia 20 cho mẫu số 5.",
+    "explanation": "20 × 1/5 = 4 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "fraction",
+      "a": 20,
+      "b": 5
+    }
+  },
+  {
+    "id": "g4-shape-2",
+    "grade": 4,
+    "zone": "shape",
+    "difficulty": "medium",
+    "skill": "Diện tích hình chữ nhật",
+    "prompt": "Bảng hình chữ nhật dài 6 cm, rộng 4 cm. Diện tích là bao nhiêu?",
+    "answers": [
+      "24 cm²",
+      "25 cm²",
+      "23 cm²",
+      "26 cm²"
+    ],
+    "correct": 0,
+    "value": 24,
+    "hint": "Nhân chiều dài với chiều rộng.",
+    "explanation": "6 × 4 = 24 cm².",
+    "scene": {
+      "zone": "shape",
+      "operation": "area",
+      "shape": "rectangle",
+      "a": 6,
+      "b": 4,
+      "unit": "cm²"
+    }
+  },
+  {
+    "id": "g4-measure-2",
+    "grade": 4,
+    "zone": "measure",
+    "difficulty": "medium",
+    "skill": "Cộng số đo độ dài",
+    "prompt": "Đoạn A dài 14 m, đoạn B dài 4 m. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "18 m",
+      "19 m",
+      "17 m",
+      "20 m"
+    ],
+    "correct": 0,
+    "value": 18,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "14 + 4 = 18 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 14,
+      "b": 4,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g4-number-3",
+    "grade": 4,
+    "zone": "number",
+    "difficulty": "medium",
+    "skill": "Phân số của một số",
+    "prompt": "Có 24 quả chuối. 1/3 số chuối là bao nhiêu quả?",
+    "answers": [
+      "8",
+      "9",
+      "7",
+      "10"
+    ],
+    "correct": 0,
+    "value": 8,
+    "hint": "Chia 24 cho mẫu số 3.",
+    "explanation": "24 × 1/3 = 8 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "fraction",
+      "a": 24,
+      "b": 3
+    }
+  },
+  {
+    "id": "g4-shape-3",
+    "grade": 4,
+    "zone": "shape",
+    "difficulty": "medium",
+    "skill": "Chu vi hình chữ nhật",
+    "prompt": "Bảng hình chữ nhật dài 7 cm, rộng 5 cm. Chu vi là bao nhiêu?",
+    "answers": [
+      "24 cm",
+      "25 cm",
+      "23 cm",
+      "26 cm"
+    ],
+    "correct": 0,
+    "value": 24,
+    "hint": "Cộng hai kích thước rồi nhân hai.",
+    "explanation": "(7 + 5) × 2 = 24 cm.",
+    "scene": {
+      "zone": "shape",
+      "operation": "perimeter",
+      "shape": "rectangle",
+      "a": 7,
+      "b": 5,
+      "unit": "cm"
+    }
+  },
+  {
+    "id": "g4-measure-3",
+    "grade": 4,
+    "zone": "measure",
+    "difficulty": "medium",
+    "skill": "So sánh độ dài",
+    "prompt": "Đoạn A dài 20 m, đoạn B dài 5 m. Đoạn A dài hơn bao nhiêu?",
+    "answers": [
+      "15 m",
+      "16 m",
+      "14 m",
+      "17 m"
+    ],
+    "correct": 0,
+    "value": 15,
+    "hint": "Lấy đoạn dài trừ đoạn ngắn.",
+    "explanation": "20 − 5 = 15 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "subtract",
+      "a": 20,
+      "b": 5,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g4-number-4",
+    "grade": 4,
+    "zone": "number",
+    "difficulty": "hard",
+    "skill": "Phân số của một số",
+    "prompt": "Có 20 quả chuối. 1/4 số chuối là bao nhiêu quả?",
+    "answers": [
+      "5",
+      "6",
+      "4",
+      "7"
+    ],
+    "correct": 0,
+    "value": 5,
+    "hint": "Chia 20 cho mẫu số 4.",
+    "explanation": "20 × 1/4 = 5 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "fraction",
+      "a": 20,
+      "b": 4
+    }
+  },
+  {
+    "id": "g4-shape-4",
+    "grade": 4,
+    "zone": "shape",
+    "difficulty": "hard",
+    "skill": "Chu vi hình chữ nhật",
+    "prompt": "Bảng hình chữ nhật dài 8 cm, rộng 6 cm. Chu vi là bao nhiêu?",
+    "answers": [
+      "28 cm",
+      "29 cm",
+      "27 cm",
+      "30 cm"
+    ],
+    "correct": 0,
+    "value": 28,
+    "hint": "Cộng hai kích thước rồi nhân hai.",
+    "explanation": "(8 + 6) × 2 = 28 cm.",
+    "scene": {
+      "zone": "shape",
+      "operation": "perimeter",
+      "shape": "rectangle",
+      "a": 8,
+      "b": 6,
+      "unit": "cm"
+    }
+  },
+  {
+    "id": "g4-measure-4",
+    "grade": 4,
+    "zone": "measure",
+    "difficulty": "hard",
+    "skill": "So sánh độ dài",
+    "prompt": "Đoạn A dài 22 m, đoạn B dài 6 m. Đoạn A dài hơn bao nhiêu?",
+    "answers": [
+      "16 m",
+      "17 m",
+      "15 m",
+      "18 m"
+    ],
+    "correct": 0,
+    "value": 16,
+    "hint": "Lấy đoạn dài trừ đoạn ngắn.",
+    "explanation": "22 − 6 = 16 m.",
+    "scene": {
+      "zone": "measure",
+      "operation": "subtract",
+      "a": 22,
+      "b": 6,
+      "unit": "m"
+    }
+  },
+  {
+    "id": "g5-number-0",
+    "grade": 5,
+    "zone": "number",
+    "difficulty": "easy",
+    "skill": "Tỉ số phần trăm",
+    "prompt": "Có 20 quả chuối. 25% số chuối là bao nhiêu quả?",
+    "answers": [
+      "5",
+      "6",
+      "4",
+      "7"
+    ],
+    "correct": 0,
+    "value": 5,
+    "hint": "Tính 20 × 25 rồi chia cho 100.",
+    "explanation": "20 × 25/100 = 5 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "percent",
+      "a": 20,
+      "b": 25
+    }
+  },
+  {
+    "id": "g5-shape-0",
+    "grade": 5,
+    "zone": "shape",
+    "difficulty": "easy",
+    "skill": "Diện tích hình tam giác",
+    "prompt": "Biển tam giác có đáy 6 cm, chiều cao 4 cm. Diện tích là bao nhiêu?",
+    "answers": [
+      "12 cm²",
+      "13 cm²",
+      "11 cm²",
+      "14 cm²"
+    ],
+    "correct": 0,
+    "value": 12,
+    "hint": "Lấy đáy nhân chiều cao rồi chia hai.",
+    "explanation": "6 × 4 ÷ 2 = 12 cm².",
+    "scene": {
+      "zone": "shape",
+      "operation": "triangleArea",
+      "shape": "triangle",
+      "a": 6,
+      "b": 4,
+      "unit": "cm²"
+    }
+  },
+  {
+    "id": "g5-measure-0",
+    "grade": 5,
+    "zone": "measure",
+    "difficulty": "easy",
+    "skill": "Cộng, trừ số đo thập phân",
+    "prompt": "Đoạn A dài 1,25 km, đoạn B dài 0,75 km. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "2 km",
+      "3 km",
+      "1 km",
+      "4 km"
+    ],
+    "correct": 0,
+    "value": 2,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "1,25 + 0,75 = 2 km.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 1.25,
+      "b": 0.75,
+      "unit": "km"
+    }
+  },
+  {
+    "id": "g5-number-1",
+    "grade": 5,
+    "zone": "number",
+    "difficulty": "easy",
+    "skill": "Tỉ số phần trăm",
+    "prompt": "Có 20 quả chuối. 50% số chuối là bao nhiêu quả?",
+    "answers": [
+      "10",
+      "11",
+      "9",
+      "12"
+    ],
+    "correct": 0,
+    "value": 10,
+    "hint": "Tính 20 × 50 rồi chia cho 100.",
+    "explanation": "20 × 50/100 = 10 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "percent",
+      "a": 20,
+      "b": 50
+    }
+  },
+  {
+    "id": "g5-shape-1",
+    "grade": 5,
+    "zone": "shape",
+    "difficulty": "easy",
+    "skill": "Diện tích hình tam giác",
+    "prompt": "Biển tam giác có đáy 8 cm, chiều cao 4 cm. Diện tích là bao nhiêu?",
+    "answers": [
+      "16 cm²",
+      "17 cm²",
+      "15 cm²",
+      "18 cm²"
+    ],
+    "correct": 0,
+    "value": 16,
+    "hint": "Lấy đáy nhân chiều cao rồi chia hai.",
+    "explanation": "8 × 4 ÷ 2 = 16 cm².",
+    "scene": {
+      "zone": "shape",
+      "operation": "triangleArea",
+      "shape": "triangle",
+      "a": 8,
+      "b": 4,
+      "unit": "cm²"
+    }
+  },
+  {
+    "id": "g5-measure-1",
+    "grade": 5,
+    "zone": "measure",
+    "difficulty": "easy",
+    "skill": "Cộng, trừ số đo thập phân",
+    "prompt": "Đoạn A dài 1,5 km, đoạn B dài 0,75 km. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "2,25 km",
+      "3,25 km",
+      "1,25 km",
+      "4,25 km"
+    ],
+    "correct": 0,
+    "value": 2.25,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "1,5 + 0,75 = 2,25 km.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 1.5,
+      "b": 0.75,
+      "unit": "km"
+    }
+  },
+  {
+    "id": "g5-number-2",
+    "grade": 5,
+    "zone": "number",
+    "difficulty": "medium",
+    "skill": "Tỉ số phần trăm",
+    "prompt": "Có 20 quả chuối. 75% số chuối là bao nhiêu quả?",
+    "answers": [
+      "15",
+      "16",
+      "14",
+      "17"
+    ],
+    "correct": 0,
+    "value": 15,
+    "hint": "Tính 20 × 75 rồi chia cho 100.",
+    "explanation": "20 × 75/100 = 15 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "percent",
+      "a": 20,
+      "b": 75
+    }
+  },
+  {
+    "id": "g5-shape-2",
+    "grade": 5,
+    "zone": "shape",
+    "difficulty": "medium",
+    "skill": "Diện tích hình tam giác",
+    "prompt": "Biển tam giác có đáy 10 cm, chiều cao 4 cm. Diện tích là bao nhiêu?",
+    "answers": [
+      "20 cm²",
+      "21 cm²",
+      "19 cm²",
+      "22 cm²"
+    ],
+    "correct": 0,
+    "value": 20,
+    "hint": "Lấy đáy nhân chiều cao rồi chia hai.",
+    "explanation": "10 × 4 ÷ 2 = 20 cm².",
+    "scene": {
+      "zone": "shape",
+      "operation": "triangleArea",
+      "shape": "triangle",
+      "a": 10,
+      "b": 4,
+      "unit": "cm²"
+    }
+  },
+  {
+    "id": "g5-measure-2",
+    "grade": 5,
+    "zone": "measure",
+    "difficulty": "medium",
+    "skill": "Cộng, trừ số đo thập phân",
+    "prompt": "Đoạn A dài 1,75 km, đoạn B dài 0,75 km. Đi cả hai đoạn dài bao nhiêu?",
+    "answers": [
+      "2,5 km",
+      "3,5 km",
+      "1,5 km",
+      "4,5 km"
+    ],
+    "correct": 0,
+    "value": 2.5,
+    "hint": "Các số đo cùng đơn vị: cộng lại.",
+    "explanation": "1,75 + 0,75 = 2,5 km.",
+    "scene": {
+      "zone": "measure",
+      "operation": "add",
+      "a": 1.75,
+      "b": 0.75,
+      "unit": "km"
+    }
+  },
+  {
+    "id": "g5-number-3",
+    "grade": 5,
+    "zone": "number",
+    "difficulty": "medium",
+    "skill": "Tỉ số phần trăm",
+    "prompt": "Có 20 quả chuối. 10% số chuối là bao nhiêu quả?",
+    "answers": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "correct": 0,
+    "value": 2,
+    "hint": "Tính 20 × 10 rồi chia cho 100.",
+    "explanation": "20 × 10/100 = 2 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "percent",
+      "a": 20,
+      "b": 10
+    }
+  },
+  {
+    "id": "g5-shape-3",
+    "grade": 5,
+    "zone": "shape",
+    "difficulty": "medium",
+    "skill": "Diện tích hình tam giác",
+    "prompt": "Biển tam giác có đáy 12 cm, chiều cao 4 cm. Diện tích là bao nhiêu?",
+    "answers": [
+      "24 cm²",
+      "25 cm²",
+      "23 cm²",
+      "26 cm²"
+    ],
+    "correct": 0,
+    "value": 24,
+    "hint": "Lấy đáy nhân chiều cao rồi chia hai.",
+    "explanation": "12 × 4 ÷ 2 = 24 cm².",
+    "scene": {
+      "zone": "shape",
+      "operation": "triangleArea",
+      "shape": "triangle",
+      "a": 12,
+      "b": 4,
+      "unit": "cm²"
+    }
+  },
+  {
+    "id": "g5-measure-3",
+    "grade": 5,
+    "zone": "measure",
+    "difficulty": "medium",
+    "skill": "Cộng, trừ số đo thập phân",
+    "prompt": "Đoạn A dài 2,75 km, đoạn B dài 0,75 km. Đoạn A dài hơn bao nhiêu?",
+    "answers": [
+      "2 km",
+      "3 km",
+      "1 km",
+      "4 km"
+    ],
+    "correct": 0,
+    "value": 2,
+    "hint": "Lấy đoạn dài trừ đoạn ngắn.",
+    "explanation": "2,75 − 0,75 = 2 km.",
+    "scene": {
+      "zone": "measure",
+      "operation": "subtract",
+      "a": 2.75,
+      "b": 0.75,
+      "unit": "km"
+    }
+  },
+  {
+    "id": "g5-number-4",
+    "grade": 5,
+    "zone": "number",
+    "difficulty": "hard",
+    "skill": "Tỉ số phần trăm",
+    "prompt": "Có 20 quả chuối. 20% số chuối là bao nhiêu quả?",
+    "answers": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "correct": 0,
+    "value": 4,
+    "hint": "Tính 20 × 20 rồi chia cho 100.",
+    "explanation": "20 × 20/100 = 4 quả chuối.",
+    "scene": {
+      "zone": "number",
+      "operation": "percent",
+      "a": 20,
+      "b": 20
+    }
+  },
+  {
+    "id": "g5-shape-4",
+    "grade": 5,
+    "zone": "shape",
+    "difficulty": "hard",
+    "skill": "Diện tích hình tam giác",
+    "prompt": "Biển tam giác có đáy 14 cm, chiều cao 4 cm. Diện tích là bao nhiêu?",
+    "answers": [
+      "28 cm²",
+      "29 cm²",
+      "27 cm²",
+      "30 cm²"
+    ],
+    "correct": 0,
+    "value": 28,
+    "hint": "Lấy đáy nhân chiều cao rồi chia hai.",
+    "explanation": "14 × 4 ÷ 2 = 28 cm².",
+    "scene": {
+      "zone": "shape",
+      "operation": "triangleArea",
+      "shape": "triangle",
+      "a": 14,
+      "b": 4,
+      "unit": "cm²"
+    }
+  },
+  {
+    "id": "g5-measure-4",
+    "grade": 5,
+    "zone": "measure",
+    "difficulty": "hard",
+    "skill": "Cộng, trừ số đo thập phân",
+    "prompt": "Đoạn A dài 3 km, đoạn B dài 0,75 km. Đoạn A dài hơn bao nhiêu?",
+    "answers": [
+      "2,25 km",
+      "3,25 km",
+      "1,25 km",
+      "4,25 km"
+    ],
+    "correct": 0,
+    "value": 2.25,
+    "hint": "Lấy đoạn dài trừ đoạn ngắn.",
+    "explanation": "3 − 0,75 = 2,25 km.",
+    "scene": {
+      "zone": "measure",
+      "operation": "subtract",
+      "a": 3,
+      "b": 0.75,
+      "unit": "km"
+    }
+  }
+]

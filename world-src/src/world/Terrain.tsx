@@ -1,7 +1,7 @@
 import { useEffect,useMemo } from 'react';
 import { BufferGeometry,Color,Float32BufferAttribute,Vector2 } from 'three';
 import { biomeAt,boundaryScale,GRID,heightAt,WORLD_X,WORLD_Z } from './map';
-const palette={central:'#789852',pine:'#567750',meadow:'#a1b263',river:'#8a9e62',lake:'#809b61',waterfall:'#7c8b66',oldForest:'#637d45',rocky:'#87916e',wetland:'#80966a',hidden:'#66834d'} as const;
+const palette={central:'#78b955',pine:'#4c985d',meadow:'#a4cd63',river:'#8ac275',lake:'#89bc68',waterfall:'#7aaa7a',oldForest:'#55974c',rocky:'#a1b48b',wetland:'#85b887',hidden:'#70ad59'} as const;
 const signed=(v:Vector2)=>boundaryScale(Math.atan2(v.y/WORLD_Z,v.x/WORLD_X))-Math.hypot(v.x/WORLD_X,v.y/WORLD_Z);
 export function buildTerrain(){const top=new BufferGeometry(),side=new BufferGeometry(),p:number[]=[],c:number[]=[],sp:number[]=[],sc:number[]=[];
  const add=(v:Vector2)=>{p.push(v.x,heightAt(v.x,v.y),v.y);const color=new Color(palette[biomeAt(v.x,v.y)]).offsetHSL(0,0,.018*Math.sin(v.x*1.7+v.y*1.3));c.push(color.r,color.g,color.b);};

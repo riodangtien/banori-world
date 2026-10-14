@@ -1,0 +1,86 @@
+[
+  {
+    "label": "DAY",
+    "width": 74,
+    "height": 26,
+    "font": "10px"
+  },
+  {
+    "label": "NIGHT",
+    "width": 74,
+    "height": 26,
+    "font": "10px"
+  },
+  {
+    "label": "SUN",
+    "width": 48,
+    "height": 26,
+    "font": "10px"
+  },
+  {
+    "label": "RAIN",
+    "width": 48,
+    "height": 26,
+    "font": "10px"
+  },
+  {
+    "label": "SNOW",
+    "width": 48,
+    "height": 26,
+    "font": "10px"
+  },
+  {
+    "label": "RESUME MOTION",
+    "width": 152,
+    "height": 26,
+    "font": "10px"
+  },
+  {
+    "label": "ENTER WORLD",
+    "width": 152,
+    "height": 32,
+    "font": "10px"
+  },
+  {
+    "label": "← EXIT WORLD",
+    "width": 89,
+    "height": 44,
+    "font": "9px"
+  },
+  {
+    "label": "First-person camera",
+    "width": 73,
+    "height": 31,
+    "font": "8px"
+  },
+  {
+    "label": "Third-person explorer",
+    "width": 80,
+    "height": 31,
+    "font": "8px"
+  },
+  {
+    "label": "Toggle location hint",
+    "width": 76,
+    "height": 44,
+    "font": "9px"
+  },
+  {
+    "label": "Open expedition map",
+    "width": 101,
+    "height": 131,
+    "font": "13.3333px"
+  },
+  {
+    "label": "Pause expedition",
+    "width": 40,
+    "height": 40,
+    "font": "13.3333px"
+  },
+  {
+    "label": "Enter fullscreen",
+    "width": 40,
+    "height": 40,
+    "font": "13.3333px"
+  }
+]

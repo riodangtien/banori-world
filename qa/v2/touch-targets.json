@@ -1,0 +1,42 @@
+[
+  {
+    "label": "← EXIT WORLD",
+    "w": 102.765625,
+    "h": 44
+  },
+  {
+    "label": "First-person camera",
+    "w": 92.578125,
+    "h": 44
+  },
+  {
+    "label": "Third-person explorer",
+    "w": 103.609375,
+    "h": 44
+  },
+  {
+    "label": "Capture quest item",
+    "w": 154.28125,
+    "h": 48
+  },
+  {
+    "label": "JUMP",
+    "w": 55,
+    "h": 55
+  },
+  {
+    "label": "Toggle location hint",
+    "w": 87.125,
+    "h": 44
+  },
+  {
+    "label": "Pause expedition",
+    "w": 44,
+    "h": 44
+  },
+  {
+    "label": "Enter fullscreen",
+    "w": 44,
+    "h": 44
+  }
+]

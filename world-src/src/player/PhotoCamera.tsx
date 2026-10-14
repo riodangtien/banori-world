@@ -1,8 +1,10 @@
+import {useGame} from '../game/GameContext';
+import {assessAnimal} from '../game/WildlifeCapture';
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Group,Vector3 } from 'three';
 import { usePlay } from './session';
-export function PhotoCamera(){const s=usePlay(),ref=useRef<Group>(null!),offset=new Vector3(.24,-.27,-.55);useFrame(({camera,gl,scene})=>{const g=ref.current;g.visible=s.mode==='play'&&s.view==='first';g.position.copy(camera.position).add(offset.clone().applyQuaternion(camera.quaternion));g.quaternion.copy(camera.quaternion);if(s.photoRequest.current&&s.mode==='play'){s.photoRequest.current=false;const visible=g.visible;g.visible=false;gl.render(scene,camera);gl.domElement.toBlob(blob=>{if(blob)s.onPhoto(blob);},'image/png');g.visible=visible;}});return <group ref={ref} visible={false} scale={.55}>
+export function PhotoCamera(){const demo=useGame(),s=usePlay(),ref=useRef<Group>(null!),offset=new Vector3(.29,-.27,-.65);useFrame(({camera,gl,scene})=>{const g=ref.current;g.visible=s.mode==='play'&&s.view==='first';g.position.copy(camera.position).add(offset.clone().applyQuaternion(camera.quaternion));g.quaternion.copy(camera.quaternion);if(s.photoRequest.current&&s.mode==='play'){s.photoRequest.current=false;const result=assessAnimal(camera,scene,demo.game.results.map(r=>r.species??'')),visible=g.visible;g.visible=false;gl.render(scene,camera);gl.domElement.toBlob(blob=>{if(blob)s.onPhoto(blob);demo.resolveCapture(result.status,result.target?.species,demo.game.runId);},'image/png');g.visible=visible;}});return <group name="photo-camera" ref={ref} visible={false} scale={.30}>
  <mesh><boxGeometry args={[.54,.3,.16]}/><meshStandardMaterial color="#222e2c" roughness={.7}/></mesh>
  <mesh position={[0,.18,0]}><boxGeometry args={[.17,.08,.13]}/><meshStandardMaterial color="#364644"/></mesh>
  <mesh position={[.08,.18,0]}><cylinderGeometry args={[.032,.032,.018,12]}/><meshStandardMaterial color="#d0aa58"/></mesh>

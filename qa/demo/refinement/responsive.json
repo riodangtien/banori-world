@@ -1,0 +1,38 @@
+[
+  {
+    "width": 1440,
+    "client": 1138,
+    "scroll": 1138,
+    "images": true
+  },
+  {
+    "width": 1280,
+    "client": 1138,
+    "scroll": 1138,
+    "images": true
+  },
+  {
+    "width": 1024,
+    "client": 974,
+    "scroll": 974,
+    "images": true
+  },
+  {
+    "width": 768,
+    "client": 718,
+    "scroll": 718,
+    "images": true
+  },
+  {
+    "width": 430,
+    "client": 404,
+    "scroll": 404,
+    "images": true
+  },
+  {
+    "width": 390,
+    "client": 364,
+    "scroll": 364,
+    "images": true
+  }
+]

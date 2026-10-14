@@ -1,9 +1,9 @@
 {
   "findings": [],
   "counts": {
-    "trees": 275,
+    "trees": 232,
     "rocks": 190,
-    "logs": 17,
+    "logs": 20,
     "stumps": 32,
     "bridges": 4
   },

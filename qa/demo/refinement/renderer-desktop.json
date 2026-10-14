@@ -1,0 +1,80 @@
+{
+  "findings": [],
+  "counts": {
+    "trees": 263,
+    "rocks": 190,
+    "logs": 16,
+    "stumps": 32,
+    "bridges": 4
+  },
+  "terrainGrid": 0.4,
+  "seed": 47023,
+  "terrainVariation": -0.04845953949687298,
+  "character": {
+    "visible": false,
+    "animation": "Idle",
+    "mixerTime": 4.290200000002974,
+    "bounds": {
+      "min": [
+        -7.618764950307708,
+        0.7084395730899469,
+        0.4517809792566747
+      ],
+      "max": [
+        -7.134873606563977,
+        2.4084395730899466,
+        1.0347603393815445
+      ]
+    },
+    "camera": [
+      -7.379152954152417,
+      2.258439573089947,
+      0.7428367334506589
+    ]
+  },
+  "invalidTransforms": [],
+  "animals": [
+    {
+      "name": "wildlife-deer",
+      "x": -16.12614018756784,
+      "z": -11.85227918566214,
+      "groundGap": 0
+    },
+    {
+      "name": "wildlife-deer",
+      "x": -9.304162643531027,
+      "z": 8.318507750112282,
+      "groundGap": 0
+    },
+    {
+      "name": "wildlife-deer",
+      "x": -19.83339829517312,
+      "z": -8.180441446253575,
+      "groundGap": 0
+    },
+    {
+      "name": "wildlife-fox",
+      "x": 21.501747752228987,
+      "z": 5.380055108651983,
+      "groundGap": 0
+    },
+    {
+      "name": "wildlife-fox",
+      "x": 5.441118064519192,
+      "z": -5.149304684372095,
+      "groundGap": 0
+    },
+    {
+      "name": "wildlife-fox",
+      "x": -2.4089903288760466,
+      "z": 5.382705330324647,
+      "groundGap": 0
+    }
+  ],
+  "weather": [],
+  "fps": 6,
+  "drawCalls": 114,
+  "triangles": 166309,
+  "geometries": 137,
+  "textures": 40
+}

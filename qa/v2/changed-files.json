@@ -1,0 +1,134 @@
+[
+  {
+    "file": "world-src/src/App.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/camera/CameraRig.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/environment/WorldLighting.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/game/ExpeditionWorld.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/game/FieldMap.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/game/game.css",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/game/game.test.ts",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/game/GameContext.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/game/GameHUD.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/game/Icons.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/game/LearningObject.tsx",
+    "kind": "new"
+  },
+  {
+    "file": "world-src/src/game/LearningStations.tsx",
+    "kind": "new"
+  },
+  {
+    "file": "world-src/src/game/LearningVisual.tsx",
+    "kind": "new"
+  },
+  {
+    "file": "world-src/src/game/locations.ts",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/game/Onboarding.tsx",
+    "kind": "new"
+  },
+  {
+    "file": "world-src/src/game/questions.ts",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/game/QuestItem.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/player/Character.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/player/controller.test.ts",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/player/controller.ts",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/player/PhotoCamera.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/player/PlayHUD.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/vegetation/Vegetation.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/world/layout.ts",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/world/quality.test.ts",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/world/Terrain.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/src/world/World.tsx",
+    "kind": "modified"
+  },
+  {
+    "file": "index.html",
+    "kind": "modified"
+  },
+  {
+    "file": "script.js",
+    "kind": "modified"
+  },
+  {
+    "file": "style.css",
+    "kind": "modified"
+  },
+  {
+    "file": "README.md",
+    "kind": "modified"
+  },
+  {
+    "file": "world-src/index.html",
+    "kind": "modified"
+  },
+  {
+    "file": "assets/banori-official-billboard.png",
+    "kind": "derived from official artwork"
+  }
+]

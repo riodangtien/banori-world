@@ -33,3 +33,12 @@ Local fonts: Space Grotesk and Barlow Condensed by their respective authors, dis
 Navigation background: assets/thanhdieuhuong.svg supplied by the project owner, used as the illustrated sky navigation background.
 
 Navigation sky v2: original background illustration generated with the built-in ImageGen tool for this project. Replaces the illustrated navigation background in the current UI.
+
+
+## BANORI V2 official mascot representation
+
+assets/banori-official-billboard.png is a rasterized derivative of the owner's unchanged 2home.svg, preserving its aspect ratio and artwork. The V2 Explorer renders this as a temporary billboard, without a rig or walking/jumping animation. The earlier CC0 human explorer remains archived in the asset collection but is not rendered as BANORI. Learning baskets, shape signs and measurement bridge miniatures are authored procedurally in project source.
+
+## Current playable explorer restoration
+
+At the owner's request, the original CC0 human-explorer.glb is again the playable explorer with Idle, Walk, Run and Jump clips. The BANORI billboard is retired from gameplay; official branding artwork remains on the website.

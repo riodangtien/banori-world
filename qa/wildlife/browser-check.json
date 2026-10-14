@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "captured": "rabbit",
+  "allSpecies": 7,
+  "noQuestionTables": true,
+  "wrongAnswerStays": true,
+  "duplicateBlocked": true,
+  "savedCollection": true,
+  "errors": []
+}
