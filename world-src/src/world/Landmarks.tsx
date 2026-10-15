@@ -64,12 +64,26 @@ export function buildLandmarks(){const b=new Builder();
  for(let i=0;i<8;i++){const a=i/8*6.283,dx=Math.cos(a)*(i%2?1.8:1.4),dz=Math.sin(a)*(i%2?1.8:1.4),cy=hy+3.1+(i%3)*.65;b.cylinder([hx,hy+2.1,hz],[hx+dx,cy,hz+dz],.22,'#725333',.1);b.rock([hx+dx,cy+.55,hz+dz],[1.2,1.1,1.12],i%3===0?'#d8b257':i%3===1?'#c79f45':'#b7a452',a);}b.rock([hx,hy+4.6,hz],[1.35,1.13,1.3],'#e0ba62');
  // Humid root micro-scenes: a few fern fronds and mushrooms, not a carpet.
  for(let i=0;i<18;i++){const a=i*2.4,d=1.6+(i%4)*.36,cx=hx+Math.cos(a)*d,cz=hz+Math.sin(a)*d,y=heightAt(cx,cz);if(i%3===0){b.cylinder([cx,y,cz],[cx,y+.13,cz],.025,'#dbd4b0');b.rock([cx,y+.16,cz],[.105,.06,.105],'#b97346');}else for(let j=0;j<3;j++)b.rock([cx+(j-1)*.07,y+.1,cz],[.1,.19,.03],'#6c924d',a+j);}
- // Solid bridge surfaces and continuous bank ramps share the player's height profile.
+ // Repeated timber bays keep rails parallel to the walkable deck, including ramps.
  for(const br of bridges){const dir=new Vector3(Math.sin(br.angle),0,Math.cos(br.angle)),normal=new Vector3(dir.z,0,-dir.x),at=(t:number,side=0,y=br.y):V=>[br.x+dir.x*t+normal.x*side,y,br.z+dir.z*t+normal.z*side];
-  const half=br.length/2,total=br.length+br.ramp*2,count=Math.ceil(total/.16);for(let i=0;i<count;i++){const a=-half-br.ramp+i*total/count,c=-half-br.ramp+(i+1)*total/count;b.add(bridgeStrip(br,a,c),i%3===0?'#c5a160':lightwood,[0,0,0]);}
-  for(const side of [-.57,.57]){b.beam(at(-half,side,br.y-.12),at(half,side,br.y-.12),.12,wood);const postCount=Math.max(1,Math.ceil(br.length/1.3));for(let i=0;i<=postCount;i++){const t=-half+i*br.length/postCount,p=at(t,side),floor=heightAt(p[0],p[2]);b.box([p[0],(floor+br.y+.8)/2,p[2]],[.09,br.y+.8-floor,.09],wood);}b.beam(at(-half,side,br.y+.72),at(half,side,br.y+.72),.075,wood);
-   for(const end of [-1,1]){let prev=at(end*half,side,br.y+.72);for(let i=1;i<=8;i++){const t=end*(half+br.ramp*i/8),p=at(t,side,bridgeSurfaceY(br,t,side)+.655);b.beam(prev,p,.075,wood);prev=p;}const t=end*(half+br.ramp),p=at(t,side,bridgeSurfaceY(br,t,side));b.box([p[0],p[1]+.33,p[2]],[.09,.66,.09],wood);}
+  const half=br.length/2,end=half+br.ramp,total=end*2,count=Math.ceil(total/.22);
+  for(let i=0;i<count;i++){const a=-end+i*total/count,c=-end+(i+1)*total/count;b.add(bridgeStrip(br,a,c),i%4===0?'#c5a160':lightwood,[0,0,0]);}
+  for(const side of [-.61,.61]){
+   const bays=Math.max(2,Math.ceil(br.length/1.25)),stations=[-end,-half,...Array.from({length:bays-1},(_,i)=>-half+(i+1)*br.length/bays),half,end];
+   for(let i=0;i<stations.length;i++){const t=stations[i],deck=bridgeSurfaceY(br,t,side),p=at(t,side,deck),foot=heightAt(p[0],p[2])-.14;
+    b.box([p[0],(foot+deck+.82)/2,p[2]],[.115,deck+.82-foot,.115],wood,br.angle);
+    b.box(at(t,side,deck+.835),[.16,.055,.16],dark,br.angle);
+    // End posts sit on small stone footings rather than floating at the bank.
+    if(i===0||i===stations.length-1)b.rock([p[0],heightAt(p[0],p[2])+.015,p[2]],[.17,.10,.17],stone,br.angle);
+    b.rock(at(t,side+(side>0?.06:-.06),deck+.65),[.023,.023,.023],dark);
+    if(i){const start=stations[i-1],steps=Math.max(1,Math.ceil((t-start)/.22));
+     for(let j=0;j<steps;j++){const u=start+(t-start)*j/steps,v=start+(t-start)*(j+1)/steps;for(const rise of [.38,.76])b.beam(at(u,side,bridgeSurfaceY(br,u,side)+rise),at(v,side,bridgeSurfaceY(br,v,side)+rise),rise>.5?.095:.055,wood);}
+    }
+   }
+   b.beam(at(-half,side,br.y-.08),at(half,side,br.y-.08),.15,dark);
   }
+  // Transverse joists support the plank deck; they stay beneath the walking surface.
+  for(let t=-half;t<=half+.001;t+=Math.max(.5,br.length/4))b.beam(at(t,-.69,br.y-.065),at(t,.69,br.y-.065),.105,wood);
  }
  // Cliff framing sits beside the source and basin, leaving the lip visibly open.
  for(const side of [-1,1])for(let i=0;i<4;i++){const cx=-8.5+side*(1.32+i*.35),cz=-14.3-(i%2)*.6,y=heightAt(cx,cz);b.rock([cx,y-.12,cz],[.6,.7,.65],i%2?'#69766a':'#83917b',i*.7);}

@@ -6,7 +6,7 @@ const signed=(v:Vector2)=>boundaryScale(Math.atan2(v.y/WORLD_Z,v.x/WORLD_X))-Mat
 export function buildTerrain(){const top=new BufferGeometry(),side=new BufferGeometry(),p:number[]=[],c:number[]=[],sp:number[]=[],sc:number[]=[];
  const add=(v:Vector2)=>{p.push(v.x,heightAt(v.x,v.y),v.y);const color=new Color(palette[biomeAt(v.x,v.y)]).offsetHSL(0,0,.018*Math.sin(v.x*1.7+v.y*1.3));c.push(color.r,color.g,color.b);};
  // Clip edge triangles to one shared implicit contour; placement samples this exact triangulation.
- for(let ix=-76;ix<76;ix++)for(let iz=-61;iz<61;iz++){const x=ix*GRID,z=iz*GRID,a=new Vector2(x,z),b=new Vector2(x+GRID,z),d=new Vector2(x,z+GRID),e=new Vector2(x+GRID,z+GRID);
+ for(let ix=-Math.ceil(WORLD_X*1.12/GRID);ix<Math.ceil(WORLD_X*1.12/GRID);ix++)for(let iz=-Math.ceil(WORLD_Z*1.12/GRID);iz<Math.ceil(WORLD_Z*1.12/GRID);iz++){const x=ix*GRID,z=iz*GRID,a=new Vector2(x,z),b=new Vector2(x+GRID,z),d=new Vector2(x,z+GRID),e=new Vector2(x+GRID,z+GRID);
   for(const triangle of [[a,d,b],[b,d,e]]){const poly:Vector2[]=[],edge:Vector2[]=[];for(let i=0;i<3;i++){const v=triangle[i],w=triangle[(i+1)%3],sv=signed(v),sw=signed(w);if(sv>=0)poly.push(v);if((sv>=0)!==(sw>=0)){const q=v.clone().lerp(w,sv/(sv-sw));poly.push(q);edge.push(q);}}
    for(let i=1;i<poly.length-1;i++){add(poly[0]);add(poly[i]);add(poly[i+1]);}
    if(edge.length===2){const [v,w]=edge,vy=heightAt(v.x,v.y),wy=heightAt(w.x,w.y);sp.push(v.x,vy,v.y,w.x,wy,w.y,v.x,-2.15,v.y,v.x,-2.15,v.y,w.x,wy,w.y,w.x,-2.15,w.y);for(let i=0;i<6;i++){const col=new Color(i===0||i===1||i===4?'#766043':'#454638');sc.push(col.r,col.g,col.b);} // close the same irregular outline underneath

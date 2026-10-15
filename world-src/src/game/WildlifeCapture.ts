@@ -1,8 +1,8 @@
 import {Box3,Camera,Object3D,Raycaster,Scene,Vector3} from 'three';
 import type {CaptureStatus} from './GameContext';
-export const species=['deer','fox','rabbit','frog','bird','butterfly','fish'] as const;
+export const species=['deer','fox','rabbit','frog','bird','butterfly','fish','wolf','bear','boar','badger','squirrel'] as const;
 export type Species=typeof species[number];
-export const speciesNames=['Deer','Fox','Rabbit','Frog','Bird','Butterfly','Fish'];
+export const speciesNames=['Deer','Fox','Rabbit','Frog','Bird','Butterfly','Fish','Wolf','Bear','Wild boar','Badger','Squirrel'];
 export type AnimalTarget={species:Species;position:{x:number;y:number;z:number};object:Object3D};
 export function animalSpecies(o:Object3D|null):Species|null{while(o){const value=o.name.replace('wildlife-','');if(species.includes(value as Species))return value as Species;o=o.parent;}return null;}
 export function animalTargets(scene:Scene):AnimalTarget[]{const targets:AnimalTarget[]=[];scene.traverse(o=>{if(!o.name.startsWith('wildlife-'))return;const name=animalSpecies(o);if(!name||!o.visible)return;const box=new Box3().setFromObject(o);if(box.isEmpty())return;const p=box.getCenter(new Vector3());targets.push({species:name,position:{x:p.x,y:p.y,z:p.z},object:o});});return targets;}

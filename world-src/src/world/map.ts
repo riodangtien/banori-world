@@ -1,7 +1,7 @@
 import { Vector2 } from 'three';
 export type Vec3=[number,number,number];
 export type Biome='central'|'pine'|'meadow'|'river'|'lake'|'waterfall'|'oldForest'|'rocky'|'wetland'|'hidden';
-export const WORLD_X=28,WORLD_Z=22,waterLevel=.16;
+export const WORLD_X=42,WORLD_Z=32,waterLevel=.16;
 export const areas=[
  {name:'Central Forest',x:-2,z:1},{name:'Pine Highlands',x:-16,z:-12},{name:'Flower Meadow',x:-14,z:7},
  {name:'River Valley',x:-1,z:-2},{name:'Great Lake',x:7,z:5},{name:'Waterfall Cliff',x:-8,z:-14},
@@ -14,9 +14,9 @@ export const semanticZones={
  FROG_WETLAND:[14,14] as const,BUTTERFLY_FLOWER_ZONE:[-13,7] as const,
 };
 const main=[new Vector2(-8.4,-12.8),new Vector2(-6,-10),new Vector2(-5,-5),new Vector2(-1,-1),new Vector2(4,1.5),new Vector2(6,4),new Vector2(8,8),new Vector2(10,13),new Vector2(9,17.5),new Vector2(8.55,19.25)];
-const west=[new Vector2(-24,-4),new Vector2(-19,-2),new Vector2(-14,0),new Vector2(-9,-.5),new Vector2(-4,-1)];
-const east=[new Vector2(23,-6),new Vector2(20,-4),new Vector2(17,-1),new Vector2(13,1.5),new Vector2(9,3.5)];
-const wetland=[new Vector2(9,10),new Vector2(12.5,11.8),new Vector2(15,13.8),new Vector2(18,14.7)];
+const west=[new Vector2(-37,-4),new Vector2(-31,-5),new Vector2(-24,-4),new Vector2(-19,-2),new Vector2(-14,0),new Vector2(-9,-.5),new Vector2(-4,-1)];
+const east=[new Vector2(37,-6),new Vector2(31,-4),new Vector2(23,-6),new Vector2(20,-4),new Vector2(17,-1),new Vector2(13,1.5),new Vector2(9,3.5)];
+const wetland=[new Vector2(9,10),new Vector2(12.5,11.8),new Vector2(15,13.8),new Vector2(18,14.7),new Vector2(23,20),new Vector2(27,23)];
 export const waterways=[main,west,east,wetland] as const;
 export const waterWidths=[.88,.52,.55,.38] as const;
 export const trailways=[
@@ -26,6 +26,11 @@ export const trailways=[
  [[-12,5],[-14,0],[-14,-6],[-19,-12]],
  [[-1,-5],[-1,-9],[-3,-12],[-5.7,-12.5]],
  [[17,5.8],[17,8],[18,11],[17,13]],
+ [[-19,-12],[-23,-12],[-27,-10],[-31,-14],[-32,-20]],
+ [[-19,15.5],[-25,17],[-28,13],[-30,7],[-30,1],[-27,-10]],
+ [[17,13],[23,18],[29,19],[33,14],[33,7],[30,2],[26,-1],[17,-6]],
+ [[17,-9.5],[22,-16],[27,-19],[28,-23]],
+ [[-14,8],[-19,5],[-24,6],[-30,7]],
 ] as readonly (readonly [number,number][])[];
 function curvePoint(points:readonly Vector2[],t:number){
  const s=Math.max(0,Math.min(.99999,t))*(points.length-1),i=Math.floor(s),u=s-i;
@@ -72,6 +77,7 @@ function rawElevation(x:number,z:number){
  const theta=Math.atan2(z/WORLD_Z,x/WORLD_X),edge=smooth((boundaryScale(theta)-Math.hypot(x/WORLD_X,z/WORLD_Z))*WORLD_Z/2);
  let h=.42+.13*Math.sin(x*.29)*Math.cos(z*.25)+terrainNoise(x,z);
  h+=bump(x,z,-16,-12,75,52,2.55)+bump(x,z,17,-11,48,40,3.35)+bump(x,z,-8,-14,34,24,2.05)+bump(x,z,17,2,92,82,.9)+bump(x,z,-19,14,44,28,.72)+bump(x,z,-2,1,130,95,.5);
+ h+=bump(x,z,-29,-18,95,70,2.2)+bump(x,z,28,-20,80,65,2.8)+bump(x,z,30,8,120,100,.65);
  h-=bump(x,z,-14,7,90,50,.22)+bump(x,z,13,14,70,40,.24);
  h*=.3+.7*edge;
  for(let i=0;i<waterways.length;i++){const n=nearestWaterway(x,z,i);const weight=1-smooth((n.distance-n.width*.72)/1.15);h=h*(1-weight)+(-.055+.08*Math.min(1,n.distance/n.width)**2)*weight;}
@@ -92,6 +98,7 @@ export function gridHeight(ix:number,iz:number){const key=ix+','+iz;let h=gridCa
 // The same diagonal and barycentric interpolation are used by Terrain.tsx.
 export function heightAt(x:number,z:number){const ix=Math.floor(x/GRID),iz=Math.floor(z/GRID),u=x/GRID-ix,v=z/GRID-iz,a=gridHeight(ix,iz),b=gridHeight(ix+1,iz),c=gridHeight(ix,iz+1),d=gridHeight(ix+1,iz+1);return u+v<=1?a+(b-a)*u+(c-a)*v:d+(c-d)*(1-u)+(b-d)*(1-v);}
 export function biomeAt(x:number,z:number):Biome{
+ if(x< -22&&z< -7)return'pine';if(x>22&&z< -12)return'rocky';if(x< -23&&z>10)return'meadow';if(x>22&&z>17)return'wetland';if(x>23)return'oldForest';if(x< -24)return'hidden';
  if(Math.hypot(x+16,z+12)<8)return'pine';if(Math.hypot(x-17,z+11)<7)return'rocky';if(Math.hypot(x+14,z-7)<7)return'meadow';
  if(Math.hypot(x-13,z-14)<7)return'wetland';if(Math.hypot(x+19,z-14)<5)return'hidden';if(Math.hypot(x-17,z-2)<8)return'oldForest';
  if(Math.hypot(x+8,z+14)<4.5)return'waterfall';if(isLake(x,z)||isLakeIsland(x,z))return'lake';if(distanceToWaterway(x,z)<2.2)return'river';return'central';

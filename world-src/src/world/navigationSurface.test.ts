@@ -1,11 +1,13 @@
 import { describe,it,expect } from 'vitest';
 import { bridges } from './layout';
 import { bridgePoint,bridgeSurfaceY,bridgeStrip,bridgeCoordinates } from './bridgeSurface';
-import { buildPaths } from './Paths';
-import { heightAt } from './map';
+import { buildPaths,bridgeConnectors } from './Paths';
+import { heightAt,isWater,distanceToTrail } from './map';
 import { CharacterController,emptyInput,groundAt } from '../player/controller';
 
 describe('paths and bridge approaches',()=>{
+ it('joins both bridge entrances to real dry trails without detached rectangular patches',()=>{const connectors=bridgeConnectors();expect(connectors.length).toBe(bridges.length*2);for(const points of connectors){expect(distanceToTrail(points[1].x,points[1].y)).toBeLessThan(.03);expect(points[0].distanceTo(points[1])).toBeLessThan(3);for(let i=0;i<=20;i++){const p=points[0].clone().lerp(points[1],i/20);expect(isWater(p.x,p.y)).toBe(false);}}});
+
  it('leaves a dry connector between neighbouring bridges instead of overlapping ramps and rails',()=>{
   for(let i=0;i<bridges.length;i++)for(let j=i+1;j<bridges.length;j++){const a=bridges[i],b=bridges[j],clearance=Math.hypot(a.x-b.x,a.z-b.z)-Math.hypot(a.length/2+a.ramp,.65)-Math.hypot(b.length/2+b.ramp,.65);expect(clearance,a.id+' / '+b.id).toBeGreaterThanOrEqual(.49);}
  });

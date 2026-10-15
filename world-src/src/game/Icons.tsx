@@ -1,3 +1,4 @@
+import {species} from './WildlifeCapture';
 import type {CSSProperties,ReactNode} from 'react';
 export type IconName='camera'|'compass'|'book'|'math'|'language'|'banana'|'crystal'|'star'|'map'|'pause'|'arrow'|'check'|'flag'|'close'|'footprint'|'chevron'|'expand'|'triangle'|'ruler';
 export function Icon({name,className='',style}:{name:IconName;className?:string;style?:CSSProperties}){
@@ -24,4 +25,4 @@ export function Icon({name,className='',style}:{name:IconName;className?:string;
  };
  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={'game-icon '+className} style={style} aria-hidden="true">{paths[name]}</svg>;
 }
-export const collectibleIcons:IconName[]=['footprint','footprint','footprint','footprint','footprint','footprint','footprint'];
+export const collectibleIcons:IconName[]=species.map(()=>'footprint' as IconName);

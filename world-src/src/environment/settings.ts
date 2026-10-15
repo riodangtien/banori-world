@@ -3,7 +3,7 @@ export type Weather='clear'|'rain'|'snow';
 export type Destination='overview'|'hero'|'camp'|'falls'|'lookout'|'pine'|'meadow'|'river'|'hidden'|'wetland'|'top'|'front'|'rear'|'left'|'right'|'low'|'high';
 export type Settings={season:Season;weather:Weather;night:boolean;paused:boolean;destination:Destination};
 export const destinations={
- overview:{position:[46,40,55],target:[0,.5,0]},
+ overview:{position:[68,60,80],target:[0,.5,0]},
  hero:{position:[8,14,16],target:[17,3,2]},
  camp:{position:[-6,9,18],target:[-14,.8,8]},
  falls:{position:[1,12,-3],target:[-8,2,-14]},

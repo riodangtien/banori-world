@@ -1,0 +1,57 @@
+[
+  {
+    "id": "wolf",
+    "title": "Wolf",
+    "creator": "Quaternius",
+    "source": "https://poly.pizza/m/P1gU3Qkr9r",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sha256": "16ac96339d06f7def9af20d5d9b27622d61e53580dab43970c9edb1bffbe8f84",
+    "modifications": "Display normalized to animal height and terrain; rough non-metallic materials. Model geometry and embedded textures unchanged.",
+    "bytes": 986712
+  },
+  {
+    "id": "bear",
+    "title": "Black bear",
+    "creator": "Poly by Google",
+    "source": "https://poly.pizza/m/56ym_pyVnel",
+    "license": "CC-BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "sha256": "04b739edaf4758849952757737ab97a7350370bdfbc662a96d7b6d4b75bc43d8",
+    "modifications": "Display normalized to animal height and terrain; rough non-metallic materials. Downloaded GLB and embedded textures unchanged; runtime procedural locomotion (lower-leg vertex gait for quadrupeds, bounding for squirrel); original GLB retained",
+    "bytes": 720616
+  },
+  {
+    "id": "boar",
+    "title": "Boar",
+    "creator": "Poly by Google",
+    "source": "https://poly.pizza/m/57fSWum6F1P",
+    "license": "CC-BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "sha256": "988d08ef51d17fc58849892afccf91a26c12bd6b17f48e12dc834d16e3a7bc12",
+    "modifications": "Display normalized to animal height and terrain; rough non-metallic materials. Downloaded GLB and embedded textures unchanged; runtime procedural locomotion (lower-leg vertex gait for quadrupeds, bounding for squirrel); original GLB retained",
+    "bytes": 55564
+  },
+  {
+    "id": "badger",
+    "title": "Badger",
+    "creator": "Poly by Google",
+    "source": "https://poly.pizza/m/8k4cduyRhi4",
+    "license": "CC-BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "sha256": "3f8a31779db85e7464cc9b3c75fee36df6a8111e85fd299b86107613b62bb3bd",
+    "modifications": "Display normalized to animal height and terrain; rough non-metallic materials. Downloaded GLB and embedded textures unchanged; runtime procedural locomotion (lower-leg vertex gait for quadrupeds, bounding for squirrel); original GLB retained",
+    "bytes": 583700
+  },
+  {
+    "id": "squirrel",
+    "title": "Squirrel",
+    "creator": "Poly by Google",
+    "source": "https://poly.pizza/m/794lutNHni-",
+    "license": "CC-BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "sha256": "89807337b584fbea76e286c23fa704546a95013b6f3091cc4e47e7db4b4b83a5",
+    "modifications": "Display normalized to animal height, orientation and terrain; rough non-metallic materials. Downloaded GLB and embedded textures unchanged; runtime procedural locomotion (lower-leg vertex gait for quadrupeds, bounding for squirrel); original GLB retained",
+    "bytes": 61092
+  }
+]

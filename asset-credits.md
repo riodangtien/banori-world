@@ -42,3 +42,21 @@ assets/banori-official-billboard.png is a rasterized derivative of the owner's u
 ## Current playable explorer restoration
 
 At the owner's request, the original CC0 human-explorer.glb is again the playable explorer with Idle, Walk, Run and Jump clips. The BANORI billboard is retired from gameplay; official branding artwork remains on the website.
+
+## Original forest wildlife expansion — 2026-10-15
+
+Wolf, bear, wild boar, badger and squirrel geometry is authored in ForestAnimals.tsx, with custom anatomical hulls, face markings and procedural leg motion. The existing Quaternius deer is the style reference. A download from its pack was researched but unavailable due to the provider quota; no additional external model is shipped. Refinements to rabbit, frog, bird, butterfly and fish are also original project geometry.
+
+## Ready-made model replacement — 2026-10-15
+
+The earlier procedural wolf/bear/boar/badger/squirrel meshes were retired from the scene. Current models:
+
+| Model | Author | Source | License |
+|---|---|---|---|
+| Wolf | Quaternius | https://poly.pizza/m/P1gU3Qkr9r | CC0 1.0 |
+| Black bear | Poly by Google | https://poly.pizza/m/56ym_pyVnel | CC-BY 3.0 |
+| Boar | Poly by Google | https://poly.pizza/m/57fSWum6F1P | CC-BY 3.0 |
+| Badger | Poly by Google | https://poly.pizza/m/8k4cduyRhi4 | CC-BY 3.0 |
+| Squirrel | Poly by Google | https://poly.pizza/m/794lutNHni- | CC-BY 3.0 |
+
+Geometry and embedded textures retained. Display scale/orientation/grounding adjusted; rough non-metallic materials. Wolf has author-supplied skeletal animations; the other four are static models. License links and attribution are shipped in world-assets/animals/credits.html and FOREST-MODEL-LICENSES.md in source and compiled output.

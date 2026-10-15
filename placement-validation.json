@@ -1,11 +1,11 @@
 {
   "findings": [],
   "counts": {
-    "trees": 232,
-    "rocks": 190,
-    "logs": 20,
-    "stumps": 32,
-    "bridges": 4
+    "trees": 514,
+    "rocks": 300,
+    "logs": 36,
+    "stumps": 48,
+    "bridges": 7
   },
   "terrainGrid": 0.4,
   "seed": 47023,
